@@ -62,20 +62,6 @@ function esky_get_menu_items($menu_name){
   }
 }
 
-function esky_group_menus($menu_items) {
-  // menu_item_parent -> db_id
-  $result = array ();
-  $where_to_search = array_column($menu_items, 'db_id');
-  foreach ($menu_items as $item) {
-    $index = array_search($item->menu_item_parent, $where_to_search);
-    if ($index !== false)
-      $result[$index] = $item;
-    else
-      array_push($result, $item);
-  }
-  return $result;
-}
-
 function esky_menu_search_parents($menu_items) {
   $result = array ();
   foreach ($menu_items as $item) {
@@ -97,17 +83,38 @@ function esky_menu_search_childsof($items, $parent) {
   return $list;
 }
 
+function esky_format_menu_title($itemtitle) {
+  if (strlen($itemtitle) <= 10)
+    return $itemtitle;
+  else
+    return substr($itemtitle, 0, 9) . "...";
+}
+
+function esky_format_submenu_title ($itemtitle) {
+  if (strlen($itemtitle) <= 20)
+    return $itemtitle;
+  else
+    return substr($itemtitle, 0, 19) . "...";
+}
+
 function the_menu($name) {
   $menu = esky_get_menu_items($name);
+
   foreach(esky_menu_search_parents($menu) as $item) {
-    echo '<div class="navbar-item has-dropdown is-hoverable">';
-    echo '  <a class="navbar-link">' . $item->title . '</a>';
-    echo '  <div class="navbar-dropdown">';
-    foreach (esky_menu_search_childsof($menu, $item->db_id) as $child) {
-      echo '<a class="navbar-item" href="' . $child->url . '">' . $child->title . "</a>";
+    if (esky_menu_search_childsof($menu, $item->db_id) === []) {
+      echo '<div class="navbar-item">';
+      echo '<a href="' . $item->url . '">' . esky_format_menu_title($item->title) . '</a></div>';
     }
-    echo '  </div>';
-    echo '</div>';
+    else {
+      echo '<div class="navbar-item has-dropdown is-hoverable">';
+      echo '  <a class="navbar-link">' . esky_format_menu_title($item->title) . '</a>';
+      echo '  <div class="navbar-dropdown">';
+      foreach (esky_menu_search_childsof($menu, $item->db_id) as $child) {
+        echo '<a class="navbar-item" href="' . $child->url . '">' . esky_format_submenu_title($child->title) . "</a>";
+      }
+      echo '  </div>';
+      echo '</div>';
+    }
   }
 }
 ?>
