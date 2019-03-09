@@ -29,5 +29,4 @@ wp_head();?>
 
     </main>
   </section>
-</div>
 <?php get_footer(); ?>

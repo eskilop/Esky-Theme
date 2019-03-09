@@ -108,7 +108,7 @@ function the_menu($name) {
     }
     else {
       echo '<div class="navbar-item has-dropdown is-hoverable">';
-      echo '  <a class="navbar-link">' . esky_format_menu_title($item->title) . '</a>';
+      echo '  <a class="navbar-link" href="' . $item->url . '">' . esky_format_menu_title($item->title) . '</a>';
       echo '  <div class="navbar-dropdown">';
       foreach (esky_menu_search_childsof($menu, $item->db_id) as $child) {
         echo '<a class="navbar-item" href="' . $child->url . '">' . esky_format_submenu_title($child->title) . "</a>";

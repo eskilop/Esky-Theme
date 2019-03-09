@@ -45,8 +45,13 @@ p.card-footer-item a {
   color: #607C8A;
 }
 
-.content {
-  margin: 1%;
+div.esky-featured-image img {
+  object-fit: cover;
+}
+
+div.esky-featured-image h1.title {
+  position: relative;
+  bottom: 5rem;
 }
 
 .footer {

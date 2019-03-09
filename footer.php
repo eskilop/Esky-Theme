@@ -1,5 +1,3 @@
-</div>
-</div>
 <?php // wp_footer(); ?>
 </body>
 <footer class="footer has-text-centered">

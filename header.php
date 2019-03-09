@@ -7,7 +7,6 @@
   <?php wp_head() ?>
 </head>
 <body class="has-navbar-fixed-top">
-<div class="content">
   <header>
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -38,4 +37,5 @@
     </div>
   </nav>
   </header>
-  <div class="columns is-multiline">
+  <div class="content" style="margin: 1%;">
+    <div class="columns is-multiline">

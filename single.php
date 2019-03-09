@@ -8,12 +8,11 @@
 wp_head();?>
 
   <header class="entry-header">
-		<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
+    <?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
 	</header>
 
   <section id="primary" class="content-area" style="margin: 2%">
     <main id="main" class="site-main">
-
       <?php
         while (have_posts()):
           the_post();
@@ -26,8 +25,6 @@ wp_head();?>
 				  }
         endwhile;
       ?>
-
     </main>
   </section>
-</div>
 <?php get_footer(); ?>
