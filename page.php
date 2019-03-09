@@ -14,9 +14,11 @@ wp_head();?>
   <section id="primary" class="content-area" style="margin: 2%">
     <main id="main" class="site-main">
 
-      <?php
+    <?php
         while (have_posts()):
           the_post();
+
+          get_template_part( 'template-parts/title/entry', 'title' );
 
           get_template_part( 'template-parts/content/content', 'single' );
   

@@ -52,13 +52,33 @@ p.card-footer-item a {
   position: relative;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 1%;
-  margin-top: 5%;
+  margin: auto;
+  margin-bottom: 2rem;
 }
 
 div.esky-featured-image h1.title {
   position: absolute;
-  bottom: 20;
+  bottom: 15;
+}
+
+nav, .navbar {
+  display: block;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.columns {
+  padding-top: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+section {
+  padding-top: 3rem;
+}
+
+.title {
+  padding: 1rem;
 }
 
 .footer {

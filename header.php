@@ -37,5 +37,5 @@
     </div>
   </nav>
   </header>
-  <div class="content" style="margin: 1%;">
+  <div class="content">
     <div class="columns is-multiline">
