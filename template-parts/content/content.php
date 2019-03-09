@@ -1,5 +1,5 @@
-<div class="column is-one-quarter is-flex">
-  <div class="card">
+<div class="column is-one-quarter">
+  <div class="card is-flex">
     <?php if (has_post_thumbnail()) : ?>
       <div class="card-image">
         <figure class="image is-4by3">
@@ -11,9 +11,14 @@
       <p class="title">
         <?php the_title(); ?>
       </p>
-      <p class="subtitle">
-      <?php echo get_the_excerpt(); ?>
-      </p>
+      <?php
+        if (!has_post_thumbnail())
+        {
+          echo '<p class="subtitle">' .
+                  get_the_excerpt() .
+                '</p>';
+        }
+      ?>
     </div>
     <footer class="card-footer">
       <p class="card-footer-item">

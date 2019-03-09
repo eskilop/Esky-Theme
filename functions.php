@@ -64,6 +64,7 @@ function esky_get_menu_items($menu_name){
 
 function esky_menu_search_parents($menu_items) {
   $result = array ();
+  if ($menu_items === null) return $result;
   foreach ($menu_items as $item) {
     if ($item->menu_item_parent === "0") {
       array_push($result, $item);

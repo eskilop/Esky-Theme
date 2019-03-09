@@ -1,9 +1,9 @@
 </div>
 </div>
-<?php wp_footer(); ?>
+<?php // wp_footer(); ?>
 </body>
-<footer class="footer">
-  <div class="content has-text-centered">
+<footer class="footer has-text-centered">
+  <div class="content">
     <p>
       <? bloginfo('name'); ?> powered by <strong>Esky</strong> theme, w/ ❤️ by 
       <a href="https://eskilop.it">

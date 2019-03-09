@@ -1,6 +1,6 @@
 <?php
 /**
- * Template to display single posts
+ * Template to display a page
  * 
  * @package Esky
  * @since Esky 1.0

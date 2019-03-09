@@ -17,12 +17,40 @@ Use it to make something cool, have fun, and share what you've learned with othe
   width: 100%;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 0.5rem;
+}
+
+.card img{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 0.5rem;
+	max-width: 100%;
+	max-height: 100%;
+	margin-top: 3%;
 }
 
 .card-footer {
   margin-top: auto;
 }
 
+div.navbar-item a {
+  color: #FFFFFF;
+}
+
+div.navbar-item a:hover {
+  color: #607C8A;
+}
+
+p.card-footer-item a {
+  color: #607C8A;
+}
+
 .content {
   margin: 1%;
+}
+
+.footer {
+  position: static;
+  width: 100%;
+  bottom: 0;
 }
