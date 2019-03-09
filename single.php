@@ -17,6 +17,12 @@ wp_head();?>
         while (have_posts()):
           the_post();
 
+          echo '<div class="esky-featured-image" style="background-image: url(';
+          the_post_thumbnail_url( 'full' );
+          echo ')">';
+          the_title( '<h1 style="margin-left: 2%;" class="content title">', '</h1>' );
+          echo '</div>';
+
           get_template_part( 'template-parts/content/content', 'single' );
   
           // If comments are open or we have at least one comment, load up the comment template.

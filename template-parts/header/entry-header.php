@@ -25,10 +25,3 @@
     </a>
   </div>
 </nav>
-<?php
-  echo '<div class="esky-featured-image">';
-  if (has_post_thumbnail())
-    the_post_thumbnail( 'full' );
-  the_title( '<h1 style="margin-left: 2%;" class="content title">', '</h1>' );
-  echo '</div>';
-?>

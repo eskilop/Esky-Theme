@@ -45,13 +45,20 @@ p.card-footer-item a {
   color: #607C8A;
 }
 
-div.esky-featured-image img {
-  object-fit: cover;
+.esky-featured-image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 1%;
+  margin-top: 5%;
 }
 
 div.esky-featured-image h1.title {
-  position: relative;
-  bottom: 5rem;
+  position: absolute;
+  bottom: 20;
 }
 
 .footer {
