@@ -51,6 +51,31 @@ if ( post_password_required() )
  
     <?php endif; // have_comments() ?>
  
-    <?php comment_form(); ?>
+    <?php
+        $aria_req = 'aria-required="true"';
+
+        $fields = array (
+            'author' => 
+            '<p class="comment-form-author" style="padding: 0.5rem;"><label for="author">' . __( 'Username') .
+            ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
+            '<input id="author" name="author" size="30" class="input is-rounded" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" ' . $aria_req . ' /></p>',
+            'email' =>
+            '<p class="comment-form-email" style="padding: 0.5rem;"><label for="email">' . __( 'Email', 'domainreference' ) .
+            ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
+            '<input id="email" name="email" size="30" class="input is-rounded" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" ' . $aria_req . ' /></p>',
+            'cookies' =>
+            '<p class="comment-form-cookies-consent" style="padding: 0.5rem;"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" />' . '<label for="wp-comment-cookies-consent">' . __( 'Save my name and email in this browser for the next time I comment, with a cookie.' ) . '</label></p>'
+        );
+
+        $comment_args = array (
+            'fields' => $fields,
+            'comment_field' =>
+            '<p class="comment-form-comment" style="padding: 0.5rem;"><label for="comment">' . _x( 'Comment', 'noun' ) . 
+            '</label><textarea id="comment" name="comment" class="textarea" cols="45" rows="8" aria-required="true"></textarea></p>',
+            'class_submit' => 'submit button is-primary',
+            'label_submit' => "Post comment"
+        );
+        comment_form($comment_args); 
+    ?>
  
 </div>

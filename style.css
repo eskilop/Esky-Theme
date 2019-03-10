@@ -73,6 +73,10 @@ nav, .navbar {
   padding-right: 1rem;
 }
 
+.comments-area {
+  padding: 1rem;
+}
+
 section {
   padding-top: 3rem;
 }
