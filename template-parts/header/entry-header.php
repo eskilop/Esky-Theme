@@ -16,7 +16,7 @@
         $custom_logo_id = get_theme_mod( 'custom_logo' );
         $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
         if ( has_custom_logo() ) {
-          echo '<img src="'. esc_url( $logo[0] ) .'" class="is-rounded">';
+          echo '<img id="avatar" src="'. esc_url( $logo[0] ) .'" class="is-rounded">';
         }
       ?>
       <div class="navbar-item">

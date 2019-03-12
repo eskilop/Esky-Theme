@@ -12,6 +12,12 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+.boxshadow, img:not(#avatar) {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .card {
   height: 100%;
   width: 100%;
@@ -85,8 +91,33 @@ section {
   padding: 1rem;
 }
 
-.footer {
-  position: static;
-  width: 100%;
-  bottom: 0;
+img.alignright {
+  float:right; 
+  margin:0 0 1em 1em
+}
+
+img.alignleft {
+  float:left; 
+  margin:0 1em 1em 0
+}
+
+img.aligncenter {
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto
+}
+
+a img.alignright {
+  float:right; margin:0 0 1em 1em
+}
+
+a img.alignleft {
+  float:left; 
+  margin:0 1em 1em 0
+}
+
+a img.aligncenter {
+  display: block; 
+  margin-left: auto;
+  margin-right: auto
 }

@@ -60,7 +60,7 @@ if ( post_password_required() )
             ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
             '<input id="author" name="author" size="30" class="input is-rounded" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" ' . $aria_req . ' /></p>',
             'email' =>
-            '<p class="comment-form-email" style="padding: 0.5rem;"><label for="email">' . __( 'Email', 'domainreference' ) .
+            '<p class="comment-form-email" style="padding: 0.5rem;"><label for="email">' . __( 'Email') .
             ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
             '<input id="email" name="email" size="30" class="input is-rounded" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" ' . $aria_req . ' /></p>',
             'cookies' =>
