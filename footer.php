@@ -1,5 +1,5 @@
 </div>
-<?php // wp_footer(); ?>
+<?php wp_footer(); ?>
 <footer class="footer has-text-centered">
   <div class="content">
     <p>
