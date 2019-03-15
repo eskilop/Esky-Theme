@@ -58,8 +58,11 @@ p.card-footer-item a {
   position: relative;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: auto;
-  margin-bottom: 2rem;
+  margin: 1.5rem auto;
+}
+
+section {
+  margin: 1rem;
 }
 
 div.esky-featured-image h1.title {
@@ -68,23 +71,16 @@ div.esky-featured-image h1.title {
 }
 
 nav, .navbar {
-  display: block;
   border-radius: 0rem 0rem 0.5rem 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .columns {
-  padding-top: 4rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1rem;
 }
 
 .comments-area {
   padding: 1rem;
-}
-
-section {
-  padding-top: 3rem;
 }
 
 .title {

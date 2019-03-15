@@ -11,7 +11,7 @@ wp_head();?>
     <?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
 	</header>
 
-  <section id="primary" class="content-area" style="margin: 2%">
+  <section id="primary" class="content-area">
     <main id="main" class="site-main">
       <?php
         while (have_posts()):

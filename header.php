@@ -6,9 +6,9 @@
   <title><?php bloginfo('name'); ?></title>
   <?php wp_head() ?>
 </head>
-<body class="has-navbar-fixed-top">
+<body>
   <header>
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="<?php bloginfo('url'); ?>">
         <?php
