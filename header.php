@@ -27,11 +27,9 @@
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
-      <div id="mainNav" class="navbar-menu">
-        <div class="navbar-start">
-          <?php the_menu('primary') ?>
-        </div>
     </div>
+    <div id="mainNav" class="navbar-menu">
+      <?php the_menu('primary') ?>
     </div>
   </nav>
   </header>

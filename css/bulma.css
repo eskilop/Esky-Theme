@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+@import url("https://fonts.googleapis.com/css?family=Kanit:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 /*! bulma.io v0.7.4 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -323,7 +323,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Kanit", sans-serif;
 }
 
 code,
@@ -1063,15 +1063,15 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 }
 
 .is-family-primary {
-  font-family: "Josefin Sans", sans-serif !important;
+  font-family: "Kanit", sans-serif !important;
 }
 
 .is-family-secondary {
-  font-family: "Josefin Sans", sans-serif !important;
+  font-family: "Kanit", sans-serif !important;
 }
 
 .is-family-sans-serif {
-  font-family: "Josefin Sans", sans-serif !important;
+  font-family: "Kanit", sans-serif !important;
 }
 
 .is-family-monospace {
@@ -9088,3 +9088,5 @@ label.panel-block:hover {
   background-color: #1c1c25;
   padding: 3rem 1.5rem 6rem;
 }
+
+/*# sourceMappingURL=bulma.css.map */
