@@ -1,4 +1,4 @@
-<div class="column is-one-quarter">
+<div class="column is-one-third">
   <div class="card is-flex">
     <?php if (has_post_thumbnail()) : ?>
       <div class="card-image">
