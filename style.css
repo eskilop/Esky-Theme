@@ -39,6 +39,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
   margin-top: auto;
 }
 
+.footer {
+  position: static !important;
+}
+
+section {
+  padding: 3rem;
+}
+
+p {
+  padding: 1rem;
+}
+
+ul {
+  list-style: unset;
+  margin-left: 3rem;
+}
+
 div.navbar-item a {
   color: #FFFFFF;
 }
@@ -59,10 +76,6 @@ p.card-footer-item a {
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 1.5rem auto;
-}
-
-section {
-  margin: 1rem;
 }
 
 div.esky-featured-image h1.title {
