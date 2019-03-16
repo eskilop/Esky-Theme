@@ -23,6 +23,16 @@ function esky_cnnmoney($attrs) {
 }
 add_shortcode( 'cnnmoney-video', 'esky_cnnmoney' );
 
+function esky_contact_form($attrs) {
+
+}
+add_shortcode( 'contact-form', 'esky_contact_form' );
+
+function esky_dailymotion($attrs) {
+  return '<iframe frameborder="0" width="480" height="270" src="https://www.dailymotion.com/embed/video/' . $attrs['id'] . '" allowfullscreen allow="autoplay"></iframe>';
+}
+add_shortcode( 'dailymotion', 'esky_dailymotion' );
+
 function esky_youtube ($attrs) {
   return '<iframe class="esky-yt-sc" width="560" height="315" src="https://www.youtube.com/embed/' . str_replace("=http://www.youtube.com/watch?v=", "", $attrs[0]) . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 }
