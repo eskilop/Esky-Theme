@@ -11,6 +11,13 @@ function esky_8tracks($attrs) {
 }
 add_shortcode( '8tracks', 'esky_8tracks' );
 
+function esky_bandcamp($attrs) {
+  $bgcol = array_key_exists('bgcol', $attrs) ? $attrs['bgcol'] : 'ffffff';
+  $linkcol = array_key_exists('linkcol', $attrs) ? $attrs['linkcol'] : '0687f5';
+  return '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=' . $attrs['album'] . '/size=large/bgcol=' . $bgcol . '/linkcol=' . $linkcol .  '/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://dangerfeelnewbies.bandcamp.com/album/culture-dawn">Culture Dawn by The DangerFeel Newbies</a></iframe>';
+}
+add_shortcode( 'bandcamp', 'esky_bandcamp' );
+
 function esky_youtube ($attrs) {
   return '<iframe class="esky-yt-sc" width="560" height="315" src="https://www.youtube.com/embed/' . str_replace("=http://www.youtube.com/watch?v=", "", $attrs[0]) . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 }
