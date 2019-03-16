@@ -18,6 +18,11 @@ function esky_bandcamp($attrs) {
 }
 add_shortcode( 'bandcamp', 'esky_bandcamp' );
 
+function esky_cnnmoney($attrs) {
+  return '<script src=\'//i.cdn.turner.com/money/.element/script/7.0/players/embed.js?videoid=' . str_replace("http://money.cnn.com/", "", str_replace("/index.html", "", $attrs['url'])) . '\'></script>';
+}
+add_shortcode( 'cnnmoney-video', 'esky_cnnmoney' );
+
 function esky_youtube ($attrs) {
   return '<iframe class="esky-yt-sc" width="560" height="315" src="https://www.youtube.com/embed/' . str_replace("=http://www.youtube.com/watch?v=", "", $attrs[0]) . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 }
