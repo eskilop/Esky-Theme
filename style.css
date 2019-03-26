@@ -143,6 +143,14 @@ a img.aligncenter {
   margin-left: auto;
   margin-right: auto
 }
+
+h2.screen-reader-text {
+  display: none;
+}
+
+div.nav-links {
+  margin: 1rem auto;
+}
  
 .esky-yt-sc {
   margin: 1rem auto;
