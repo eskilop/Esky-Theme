@@ -33,6 +33,15 @@ function esky_dailymotion($attrs) {
 }
 add_shortcode( 'dailymotion', 'esky_dailymotion' );
 
+function esky_flickr_video($attrs) {
+  return '<a data-flickr-embed="true"  href="https://www.flickr.com/photos/137234620@N07/22926094479/in/photolist-cx6Bzd-AVUea2-AVKjei-fL1MsD-AwQMTP-JRc6Kk-AVUdDH-Jqp6S5-7s6GbU-7Xwy4D-bWawMB-zJmreR-HUPNyk-7GW2jH-2cJaScA-Q4Vegt-2dQ6DDv-RGdNBE-Q4VteP-29WnFmm-2cJarYq-zJcPzG-2ckXa6z-HURYdN-JRc6yD-2cCxwv1-nGkMuZ-2dE8qmL-YySjdM-23iv3Mo-ZA5B6p-fbCsvR-6VvEfd-6tQooC-dzbE4z-cgioS9-9unmmR-7ALnWu-efxNsA-AQr7VE-bV3HHK-9JEbFu-8k7DsU-7Q68xQ-ird4VR-eEgDR1-9Pmewh-29i4BvZ-8HcnsY-8G8BAt" title="gh"><img src="https://live.staticflickr.com/604/22926094479_4c6a15df47_z.jpg" width="640" height="360" alt="gh"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>';
+}
+
+function esky_instagram($attrs) {
+  return '<iframe src="https://instagram.com/p/fA9uwTtkSN/media/?size=t">';
+}
+add_shortcode( 'instagram', 'esky_instagram' );
+
 function esky_youtube ($attrs) {
   return '<iframe class="esky-yt-sc" width="560" height="315" src="https://www.youtube.com/embed/' . str_replace("=http://www.youtube.com/watch?v=", "", $attrs[0]) . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 }

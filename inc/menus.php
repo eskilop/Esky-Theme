@@ -29,10 +29,10 @@ function esky_menu_search_childsof($items, $parent) {
 }
 
 function esky_format_menu_title($itemtitle) {
-  if (strlen($itemtitle) <= 10)
+  if (strlen($itemtitle) <= 12)
     return $itemtitle;
   else
-    return substr($itemtitle, 0, 9) . "...";
+    return substr($itemtitle, 0, 11) . "...";
 }
 
 function esky_format_submenu_title ($itemtitle) {
