@@ -4365,8 +4365,8 @@ fieldset[disabled] .radio {
 
 .tag:not(body) {
   align-items: center;
-  background-color: whitesmoke;
-  border-radius: 4px;
+  background-color: #23232d;
+  border-radius: 0.5rem;
   color: #ededed;
   display: inline-flex;
   font-size: 0.75rem;
@@ -4467,10 +4467,10 @@ fieldset[disabled] .radio {
   width: 1px;
 }
 .tag:not(body).is-delete:hover, .tag:not(body).is-delete:focus {
-  background-color: #e8e8e8;
+  background-color: #18181f;
 }
 .tag:not(body).is-delete:active {
-  background-color: #dbdbdb;
+  background-color: #0d0d11;
 }
 .tag:not(body).is-rounded {
   border-radius: 290486px;
