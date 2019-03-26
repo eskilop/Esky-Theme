@@ -29,10 +29,53 @@ pre {
   white-space: pre-wrap;       /* Since CSS 2.1 */
 }
  
-.boxshadow, img:not(#avatar) {
+.boxshadow, img:not(#avatar), img:not(.esky-author) {
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.roundshadow, #avatar, .esky-author {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.esky-featured-image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0.5rem auto;
+}
+
+.post-meta {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.esky-author {
+  border: 3px solid white;
+  border-radius: 50% !important;
+  display: flex;
+  width: 5rem;
+  height: 5rem;
+}
+
+.meta-mixed {
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.meta-date, .meta-author{
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.5rem;
+}
+
  
 .card {
   height: 100%;
@@ -78,17 +121,6 @@ div.navbar-item a:hover {
  
 p.card-footer-item a {
   color: #607C8A;
-}
- 
-.esky-featured-image {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 0.5rem auto;
 }
  
 div.esky-featured-image h1.title {

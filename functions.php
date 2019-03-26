@@ -60,4 +60,6 @@ add_action( 'wp_enqueue_scripts', 'esky_enqueue_scripts' );
 require get_template_directory() . '/inc/menus.php';
 
 require get_template_directory() . '/inc/shortcodes.php';
+
+require get_template_directory() . '/inc/articles.php';
 ?>
