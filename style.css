@@ -51,7 +51,7 @@ pre {
 }
 
 .post-meta {
-  margin: 1rem;
+  margin: 3rem auto;
   display: flex;
   flex-direction: row;
 }
@@ -60,8 +60,8 @@ pre {
   border: 3px solid white;
   border-radius: 50% !important;
   display: flex;
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
 }
 
 .meta-mixed {
