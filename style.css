@@ -1,6 +1,5 @@
 /*
 Theme Name: Esky
-
 Author: Eskilop
 Author URI: https://eskilop.it/
 Description: Eskilop theme
@@ -12,23 +11,29 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-
-
+ 
 blockquote {
   margin-left: 1.5rem;
+  border-left: 3px solid white;
+  background-color: #18181f !important;
 }
-
+ 
 pre {
   background-color: #23232d;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: pre-wrap;       /* Since CSS 2.1 */
 }
-
+ 
 .boxshadow, img:not(#avatar) {
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+ 
 .card {
   height: 100%;
   width: 100%;
@@ -37,7 +42,7 @@ pre {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 0.5rem;
 }
-
+ 
 .card img{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 0.5rem;
@@ -45,103 +50,116 @@ pre {
 	max-height: 100%;
 	margin-top: 3%;
 }
-
+ 
 .card-footer {
   margin-top: auto;
 }
-
+ 
 .footer {
   position: static !important;
 }
-
+ 
 section {
-  padding: 3rem;
+  padding: 2rem;
 }
-
-p {
-  padding: 1rem;
-}
-
+ 
 ul {
   list-style: unset;
   margin-left: 3rem;
 }
-
+ 
 div.navbar-item a {
   color: #FFFFFF;
 }
-
+ 
 div.navbar-item a:hover {
   color: #607C8A;
 }
-
+ 
 p.card-footer-item a {
   color: #607C8A;
 }
-
+ 
 .esky-featured-image {
   height: 100%;
   width: 100%;
   background-size: cover;
+  background-position: center;
   position: relative;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 1.5rem auto;
+  margin: 0.5rem auto;
 }
-
+ 
 div.esky-featured-image h1.title {
   position: absolute;
   bottom: 15;
 }
-
+ 
 nav, .navbar {
   border-radius: 0rem 0rem 0.5rem 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+ 
 .columns {
   padding: 1rem;
 }
-
+ 
 .comments-area {
   padding: 1rem;
 }
-
+ 
 .title {
   padding: 1rem;
 }
-
+ 
 img.alignright {
   float:right; 
   margin:0 0 1em 1em
 }
-
+ 
 img.alignleft {
   float:left; 
   margin:0 1em 1em 0
 }
-
+ 
 img.aligncenter {
   display: block; 
   margin-left: auto; 
   margin-right: auto
 }
-
+ 
 a img.alignright {
   float:right; margin:0 0 1em 1em
 }
-
+ 
 a img.alignleft {
   float:left; 
   margin:0 1em 1em 0
 }
-
+ 
 a img.aligncenter {
   display: block; 
   margin-left: auto;
   margin-right: auto
 }
-
+ 
 .esky-yt-sc {
   margin: 1rem auto;
+}
+
+@media screen and (max-width : 1080px)
+{
+  html  {
+    font-size: 10px;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .esky-featured-image {
+    width: 100%;
+    height: 50%;
+  }
 }
