@@ -56,7 +56,7 @@ footer {
 }
 
 .esky-featured-image {
-  height: 50%;
+  height: 60%;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -212,7 +212,7 @@ div.nav-links {
 
 @media only screen and (max-width : 2048px)
 {
-  body  {
+  body {
     font-size: 1rem;
   }
 }
@@ -223,7 +223,11 @@ div.nav-links {
     font-size: 1rem;
   }
 
-  body  {
+  h1.title {
+    font-size: 1.5rem;
+  }
+
+  body, .content {
     font-size: 1rem;
   }
 
@@ -238,7 +242,15 @@ div.nav-links {
     font-size: 0.8rem;
   }
 
-  body  {
+  .esky-featured-image {
+    height: 35%;
+  }
+
+  h1.title {
+    font-size: 1rem;
+  }
+
+  body, .content{
     font-size: 0.8rem;
   }
 }
