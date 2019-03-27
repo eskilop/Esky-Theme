@@ -21,11 +21,9 @@
       ?>
     </div>
     <footer class="card-footer">
-      <p class="card-footer-item">
-        <span>
-          <a href="<?php the_permalink(); ?>">Read</a>
-        </span>
-      </p>
+      <a href="<?php the_permalink(); ?>" id="read-btn" class="button card-footer-item is-primary">
+        Read
+      </a>
     </footer>
   </div>
 </div>
