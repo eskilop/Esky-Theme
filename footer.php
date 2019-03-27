@@ -3,7 +3,7 @@
   <div class="content">
     <p>
       Proudly powered by <strong>Esky</strong> theme, w/ ❤️ by 
-      <a href="https://eskilop.it">
+      <a href="https://eskilop.it/so-here-i-am">
         <img id="avatar" src="https://assets.gitlab-static.net/uploads/-/system/user/avatar/764306/avatar.png" width="24" height="24">
       </a>
     </p>

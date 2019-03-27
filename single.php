@@ -26,7 +26,6 @@ wp_head();?>
 					  comments_template();
 				  }
         endwhile;
-        echo '</div>';
       ?>
       <!-- pagination -->
       <?php

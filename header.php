@@ -34,4 +34,3 @@
   </nav>
   </header>
   <div class="content">
-    <div class="columns is-multiline">

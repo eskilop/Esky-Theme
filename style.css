@@ -12,13 +12,13 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
  
-blockquote {
+.content blockquote {
   margin-left: 1.5rem;
   border-left: 3px solid white;
   background-color: #18181f !important;
 }
  
-pre {
+.content pre {
   background-color: #23232d;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -27,6 +27,10 @@ pre {
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
   white-space: pre-wrap;       /* Since CSS 2.1 */
+}
+
+footer {
+  width: 100%;
 }
  
 .boxshadow, img:not(#avatar), img:not(.esky-author) {
@@ -188,7 +192,7 @@ div.nav-links {
   margin: 1rem auto;
 }
 
-@media screen and (max-width : 1080px)
+@media only screen and (max-width : 1080px)
 {
   html  {
     font-size: 12px;
