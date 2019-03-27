@@ -2,7 +2,7 @@
   <div class="card is-flex">
     <?php if (has_post_thumbnail()) : ?>
       <div class="card-image">
-        <figure class="image is-4by3">
+        <figure class="image is-16by9">
           <?php the_post_thumbnail('medium'); ?>
         </figure>
       </div>
