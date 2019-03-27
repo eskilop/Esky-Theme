@@ -37,6 +37,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
   white-space: pre-wrap;       /* Since CSS 2.1 */
 }
 
+.post-tags {
+  margin: 1rem auto;
+}
+
 footer {
   width: 100%;
 }
