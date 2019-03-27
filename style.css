@@ -112,6 +112,7 @@ footer {
  
 .footer {
   position: static !important;
+  padding: 5rem 2.5rem 5rem !important;
 }
  
 section {
@@ -145,8 +146,12 @@ nav, .navbar {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
  
-.columns {
-  padding: 1rem;
+.columns, .column {
+  margin: 0.25rem auto !important;
+}
+
+nav .pagination {
+  width: 100%;
 }
  
 .comments-area {
@@ -209,8 +214,12 @@ div.nav-links {
 
 @media only screen and (max-width : 1080px)
 {
+  header, footer {
+    font-size: 1rem;
+  }
+
   body  {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 
   section {
@@ -220,7 +229,11 @@ div.nav-links {
 
 @media only screen and (max-width : 640px)
 {
+  header, footer {
+    font-size: 0.8rem;
+  }
+
   body  {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 }
