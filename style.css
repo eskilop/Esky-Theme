@@ -12,6 +12,10 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+#avatar {
+  border-radius: 50%;
+}
+
 #read-btn {
   background-color: #23232d;
 }
@@ -45,12 +49,12 @@ footer {
   width: 100%;
 }
  
-.boxshadow, img:not(#avatar), img:not(.esky-author) {
+.boxshadow {
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.roundshadow, #avatar, .esky-author {
+.roundshadow, .esky-author {
   border-radius: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -103,7 +107,6 @@ footer {
 }
  
 .card img{
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 0.5rem;
 	max-width: 100%;
 	max-height: 100%;
@@ -223,11 +226,11 @@ div.nav-links {
     font-size: 1rem;
   }
 
-  h1.title {
+  h1.title, .title {
     font-size: 1.5rem;
   }
 
-  body, .content {
+  body, .content, .subtitle {
     font-size: 1rem;
   }
 
@@ -246,11 +249,11 @@ div.nav-links {
     height: 35%;
   }
 
-  h1.title {
+  h1.title, .title {
     font-size: 1rem;
   }
 
-  body, .content{
+  body, .content, .subtitle{
     font-size: 0.8rem;
   }
 }
