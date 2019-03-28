@@ -16,12 +16,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
   border-radius: 50%;
 }
 
-#read-btn {
-  background-color: #23232d;
+a.read-btn.button.card-footer-item.is-primary {
+  background-color: #23232d !important;
+  border: none;
+  outline: 0;
 }
 
-#read-btn:active{
+a.read-btn.button.card-footer-item.is-primary:active,
+a.read-btn.button.card-footer-item.is-primary:focus {
   background-color: #18181f !important;
+  outline: 0;
+  border: none;
+  box-shadow:none;
 }
  
 .content blockquote {
