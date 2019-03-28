@@ -9,4 +9,5 @@
     </p>
   </div>
 </footer>
+<?php require 'gtag.html' ?>
 </body>
