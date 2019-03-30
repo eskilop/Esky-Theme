@@ -33,7 +33,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php if ( ! is_singular( 'attachment' ) ) : ?>
+	<?php if ( ! is_singular( 'attachment' ) && ! is_page() ) : ?>
 		<?php get_template_part( 'template-parts/post/author', 'bio' ); ?>
 	<?php endif; ?>
 </article><!-- #post-${ID} -->

@@ -20,8 +20,7 @@ wp_head();?>
           get_template_part( 'template-parts/title/entry', 'title' );
 
           get_template_part( 'template-parts/content/content', 'single' );
-          
-          esky_display_article_meta();
+
           esky_display_tags();
   
           // If comments are open or we have at least one comment, load up the comment template.
