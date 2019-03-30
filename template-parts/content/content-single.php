@@ -31,7 +31,6 @@
 			)
 		);
 		?>
-		<?php esky_display_article_meta(); esky_display_tags(); ?>
 	</div><!-- .entry-content -->
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>

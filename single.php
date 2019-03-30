@@ -20,20 +20,15 @@ wp_head();?>
           get_template_part( 'template-parts/title/entry', 'title' );
 
           get_template_part( 'template-parts/content/content', 'single' );
+          
+          esky_display_article_meta();
+          esky_display_tags();
   
           // If comments are open or we have at least one comment, load up the comment template.
 				  if ( comments_open() || get_comments_number() ) {
 					  comments_template();
 				  }
         endwhile;
-      ?>
-      <!-- pagination -->
-      <?php
-        the_posts_pagination( array(
-	        'mid_size'  => 2,
-	        'prev_text' => __( 'Back', 'textdomain' ),
-	        'next_text' => __( 'Onward', 'textdomain' ),
-        ) );
       ?>
     </main>
   </section>

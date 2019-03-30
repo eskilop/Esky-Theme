@@ -27,4 +27,8 @@ function esky_display_article_meta() {
     echo '  </div>';
     echo '</div>';
 }
+
+function eskt_display_cta() {
+    
+}
 ?>

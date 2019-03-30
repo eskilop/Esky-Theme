@@ -31,8 +31,8 @@ a.read-btn.button.card-footer-item.is-primary:focus {
 }
  
 .content blockquote {
-  margin-left: 1.5rem;
-  border-left: 3px solid white;
+  margin-left: 0.2rem;
+  border-left: 5px solid white;
   background-color: #18181f !important;
 }
  
@@ -55,7 +55,7 @@ footer {
   width: 100%;
 }
  
-.boxshadow {
+.boxshadow, a img {
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -145,10 +145,6 @@ div.navbar-item a:hover {
   color: #607C8A;
 }
  
-p.card-footer-item a {
-  color: #607C8A;
-}
- 
 div.esky-featured-image h1.title {
   position: absolute;
   bottom: 15;
@@ -178,18 +174,18 @@ nav .pagination, .pagination {
  
 img.alignright {
   float:right; 
-  margin:0 0 1em 1em
+  margin:0 0 1em 1em;
 }
  
 img.alignleft {
   float:left; 
-  margin:0 1em 1em 0
+  margin:0 1em 1em 0;
 }
  
 img.aligncenter {
   display: block; 
   margin-left: auto; 
-  margin-right: auto
+  margin-right: auto;
 }
  
 a img.alignright {
@@ -198,13 +194,13 @@ a img.alignright {
  
 a img.alignleft {
   float:left; 
-  margin:0 1em 1em 0
+  margin:0 1em 1em 0;
 }
  
 a img.aligncenter {
   display: block; 
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 h2.screen-reader-text {
