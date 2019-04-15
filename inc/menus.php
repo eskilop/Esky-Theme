@@ -1,4 +1,15 @@
 <?php
+function esky_display_social_menu() {
+  echo "<a class=\"button esky-social-item is-blue is-rounded\" href=\"https://t.me/".get_theme_mod( "esky_telegram", "username" )."\">
+  <span class=\"icon\">
+    <i class=\"fab fa-telegram-plane\"></i>
+  </span></a>";
+  echo "<a class=\"button esky-social-item is-red is-rounded\" href=\"https://instagram.com/".get_theme_mod( "esky_instagram", "" )."\">
+  <span class=\"icon\">
+    <i class=\"fab fa-instagram\"></i>
+  </span></a>";
+}
+
 function esky_get_menu_items($menu_name){
   if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
       $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );

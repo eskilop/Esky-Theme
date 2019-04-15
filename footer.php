@@ -7,6 +7,9 @@
         <img id="avatar" src="https://assets.gitlab-static.net/uploads/-/system/user/avatar/764306/avatar.png" width="24" height="24">
       </a>
     </p>
+    <div class="esky-social-menu">
+    <?php esky_display_social_menu(); ?>
+    </div>
   </div>
 </footer>
 <?php @ require 'gtag.html' ?>

@@ -47,6 +47,7 @@ add_action( 'after_setup_theme', 'esky_setup');
 
 function esky_enqueue_scripts() {
   wp_enqueue_style( 'material-icons', get_template_directory_uri() . '/css/material-icons/material-icons.css', $media="all");
+  wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/fontawesome/all.css', $media="all");
   wp_enqueue_style( 'bulma', get_template_directory_uri() . '/css/bulma.css', $media="all" );
   wp_enqueue_style( 'style', get_stylesheet_uri(), $media="all" );
   wp_enqueue_script('jquery');
@@ -57,9 +58,9 @@ function esky_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'esky_enqueue_scripts' );
 
+require get_template_directory() . '/inc/sanitizers.php';
+require get_template_directory() . '/inc/admin.php';
 require get_template_directory() . '/inc/menus.php';
-
 require get_template_directory() . '/inc/shortcodes.php';
-
 require get_template_directory() . '/inc/articles.php';
 ?>

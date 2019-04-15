@@ -127,6 +127,10 @@ footer {
   position: static !important;
   padding: 5rem 2.5rem 5rem !important;
 }
+
+.esky-social-item {
+  margin: 2px;
+}
  
 section {
   padding: 2rem;
