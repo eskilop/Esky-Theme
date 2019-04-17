@@ -8,6 +8,10 @@ function esky_display_social_menu() {
   <span class=\"icon\">
     <i class=\"fab fa-instagram\"></i>
   </span></a>";
+  echo "<a class=\"button esky-social-item is-blue is-rounded\" href=\"https://twitter.com/".get_theme_mod( "esky_twitter", "" )."\">
+  <span class=\"icon\">
+    <i class=\"fab fa-twitter\"></i>
+  </span></a>";
 }
 
 function esky_get_menu_items($menu_name){

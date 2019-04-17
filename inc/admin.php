@@ -19,9 +19,6 @@ function esky_customize_register($wp_customize) {
       'label' => __( 'Telegram username' ),
       'description' => __( 'Telegram username, without \'@\'' ),
       'input_attrs' => array(
-      //'class' => 'my-custom-class-for-js',
-      //'style' => 'border: 1px solid #900',
-      'placeholder' => __( 'EskyPortal' ),
     ),
     //'active_callback' => 'is_front_page',
   ) );
@@ -36,12 +33,26 @@ function esky_customize_register($wp_customize) {
       'type' => 'text',
       'priority' => 10, // Within the section.
       'section' => 'esky_social', // Required, core or custom.
-      'label' => __( 'Instagram link' ),
+      'label' => __( 'Instagram username' ),
       'description' => __( 'Instagram username, without \'@\'' ),
       'input_attrs' => array(
-      //'class' => 'my-custom-class-for-js',
-      //'style' => 'border: 1px solid #900',
-      'placeholder' => __( '_eskilop' ),
+    ),
+    //'active_callback' => 'is_front_page',
+  ) );
+
+  $wp_customize->add_setting( 'esky_twitter', array(
+    'default' => '_eskilop',
+    'sanitize_callback' => 'esky_sanitize_twitter',
+  ) );
+
+  $wp_customize->add_control(
+    'esky_twitter', array(
+      'type' => 'text',
+      'priority' => 10, // Within the section.
+      'section' => 'esky_social', // Required, core or custom.
+      'label' => __( 'Twitter username' ),
+      'description' => __( 'Twitter username, without \'@\'' ),
+      'input_attrs' => array(
     ),
     //'active_callback' => 'is_front_page',
   ) );

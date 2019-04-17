@@ -18,11 +18,6 @@ function esky_display_cta() {
     echo "<span style=\"padding:1.2rem;\" class=\"icon\"><i class=\"fab fa-telegram-plane\"></i></span>";
     echo "</a>";
 
-    echo "<a class=\"button esky-social-item is-red\" href=\"http://twitter.com/share?url=https://www.eskilop.it".$_SERVER['REQUEST_URI']."\">";
-    echo "Share on ";
-    echo "<span style=\"padding:1.2rem;\" class=\"icon\"><i class=\"fab fa-instagram\"></i></span>";
-    echo "</a>";
-
     echo "<a class=\"button esky-social-item is-blue\" href=\"http://twitter.com/share?url=https://www.eskilop.it".$_SERVER['REQUEST_URI']."\">";
     echo "Share on ";
     echo "<span style=\"padding:1.2rem;\" class=\"icon\"><i class=\"fab fa-twitter\"></i></span>";
