@@ -33,6 +33,8 @@
 		?>
 	</div><!-- .entry-content -->
 
+	<?php esky_display_cta(); ?>
+
 	<?php if ( ! is_singular( 'attachment' ) && ! is_page() ) : ?>
 		<?php get_template_part( 'template-parts/post/author', 'bio' ); ?>
 	<?php endif; ?>
