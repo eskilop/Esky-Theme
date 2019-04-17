@@ -14,47 +14,92 @@ function esky_customize_register($wp_customize) {
   $wp_customize->add_control(
     'esky_telegram', array(
       'type' => 'text',
-      'priority' => 10, // Within the section.
-      'section' => 'esky_social', // Required, core or custom.
+      'priority' => 10,
+      'section' => 'esky_social',
       'label' => __( 'Telegram username' ),
       'description' => __( 'Telegram username, without \'@\'' ),
       'input_attrs' => array(
     ),
-    //'active_callback' => 'is_front_page',
   ) );
 
   $wp_customize->add_setting( 'esky_instagram', array(
-    'default' => '_eskilop',
+    'default' => '',
     'sanitize_callback' => 'esky_sanitize_instagram',
   ) );
 
   $wp_customize->add_control(
     'esky_instagram', array(
       'type' => 'text',
-      'priority' => 10, // Within the section.
-      'section' => 'esky_social', // Required, core or custom.
+      'priority' => 10,
+      'section' => 'esky_social',
       'label' => __( 'Instagram username' ),
       'description' => __( 'Instagram username, without \'@\'' ),
       'input_attrs' => array(
     ),
-    //'active_callback' => 'is_front_page',
   ) );
 
   $wp_customize->add_setting( 'esky_twitter', array(
-    'default' => '_eskilop',
+    'default' => '',
     'sanitize_callback' => 'esky_sanitize_twitter',
   ) );
 
   $wp_customize->add_control(
     'esky_twitter', array(
       'type' => 'text',
-      'priority' => 10, // Within the section.
-      'section' => 'esky_social', // Required, core or custom.
+      'priority' => 10,
+      'section' => 'esky_social',
       'label' => __( 'Twitter username' ),
       'description' => __( 'Twitter username, without \'@\'' ),
       'input_attrs' => array(
     ),
-    //'active_callback' => 'is_front_page',
+  ) );
+
+  $wp_customize->add_setting( 'esky_gitlab', array(
+    'default' => '',
+    'sanitize_callback' => 'esky_sanitize_gitlab',
+  ) );
+
+  $wp_customize->add_control(
+    'esky_gitlab', array(
+      'type' => 'text',
+      'priority' => 10,
+      'section' => 'esky_social',
+      'label' => __( 'Gitlab username' ),
+      'description' => __( 'Gitlab username, without \'@\'' ),
+      'input_attrs' => array(
+    ),
+  ) );
+
+  $wp_customize->add_setting( 'esky_github', array(
+    'default' => '',
+    'sanitize_callback' => 'esky_sanitize_github',
+  ) );
+
+  $wp_customize->add_control(
+    'esky_github', array(
+      'type' => 'text',
+      'priority' => 10,
+      'section' => 'esky_social',
+      'label' => __( 'Github username' ),
+      'description' => __( 'Github username, without \'@\'' ),
+      'input_attrs' => array(
+    ),
+  ) );
+
+  $wp_customize->add_setting( 'esky_dribbble', array(
+    'default' => '',
+    'sanitize_callback' => 'esky_sanitize_dribbble',
+  ) );
+
+  $wp_customize->add_control(
+    'esky_dribbble', array(
+      'type' => 'text',
+      'priority' => 10,
+      'section' => 'esky_social',
+      'label' => __( 'Dribbble username' ),
+      'description' => __( 'Dribbble username, without \'@\'' ),
+      'input_attrs' => array(
+    ),
   ) );
 
 }

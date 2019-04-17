@@ -1,17 +1,60 @@
 <?php
 function esky_display_social_menu() {
-  echo "<a class=\"button esky-social-item is-blue is-rounded\" href=\"https://t.me/".get_theme_mod( "esky_telegram", "username" )."\">
-  <span class=\"icon\">
-    <i class=\"fab fa-telegram-plane\"></i>
-  </span></a>";
-  echo "<a class=\"button esky-social-item is-red is-rounded\" href=\"https://instagram.com/".get_theme_mod( "esky_instagram", "" )."\">
-  <span class=\"icon\">
-    <i class=\"fab fa-instagram\"></i>
-  </span></a>";
-  echo "<a class=\"button esky-social-item is-blue is-rounded\" href=\"https://twitter.com/".get_theme_mod( "esky_twitter", "" )."\">
-  <span class=\"icon\">
-    <i class=\"fab fa-twitter\"></i>
-  </span></a>";
+
+  $twitter = get_theme_mod( "esky_twitter", null );
+  $telegram = get_theme_mod( "esky_telegram", null );
+  $instagram = get_theme_mod( "esky_instagram", null );
+  $gitlab = get_theme_mod( "esky_gitlab", null );
+  $github = get_theme_mod( "esky_github", null );
+  $dribbble = get_theme_mod( "esky_dribbble", null);
+
+  if (isset($telegram) && $telegram !=="") {
+    echo "<a class=\"button esky-social-item is-blue is-rounded\" href=\"https://t.me/".$telegram."\">
+            <span class=\"icon\">
+              <i class=\"fab fa-telegram-plane\"></i>
+            </span>
+          </a>";
+  }
+
+  if (isset($instagram) && $instagram !=="") {
+    echo "<a class=\"button esky-social-item is-red is-rounded\" href=\"https://instagram.com/".$instagram."\">
+            <span class=\"icon\">
+              <i class=\"fab fa-instagram\"></i>
+            </span>
+          </a>";
+  }
+
+  if (isset($twitter) && $twitter !=="") {
+    echo "<a class=\"button esky-social-item is-blue is-rounded\" href=\"https://twitter.com/".$twitter."\">
+            <span class=\"icon\">
+              <i class=\"fab fa-twitter\"></i>
+            </span>
+          </a>";
+  }
+  
+  if (isset($gitlab) && $gitlab !=="") {
+    echo "<a class=\"button esky-social-item is-orange is-rounded\" href=\"https://gitlab.com/".$gitlab."\">
+            <span class=\"icon\">
+              <i class=\"fab fa-gitlab\"></i>
+            </span>
+          </a>";
+  }
+
+  if (isset($github) && $github !=="") {
+    echo "<a class=\"button esky-social-item is-black is-rounded\" href=\"https://github.com/".$github."\">
+            <span class=\"icon\">
+              <i class=\"fab fa-github\"></i>
+            </span>
+          </a>";
+  }
+
+  if (isset($dribbble) && $dribbble !=="") {
+    echo "<a class=\"button esky-social-item is-pink is-rounded\" href=\"https://dribbble.com/".$dribbble."\">
+            <span class=\"icon\">
+              <i class=\"fab fa-dribbble\"></i>
+            </span>
+          </a>";
+  }
 }
 
 function esky_get_menu_items($menu_name){
