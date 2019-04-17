@@ -86,6 +86,22 @@ function esky_customize_register($wp_customize) {
     ),
   ) );
 
+  $wp_customize->add_setting( 'esky_bitbucket', array(
+    'default' => '',
+    'sanitize_callback' => 'esky_sanitize_bitbucket',
+  ) );
+
+  $wp_customize->add_control(
+    'esky_bitbucket', array(
+      'type' => 'text',
+      'priority' => 10,
+      'section' => 'esky_social',
+      'label' => __( 'Bitbucket username' ),
+      'description' => __( 'Bitbucket username, without \'@\'' ),
+      'input_attrs' => array(
+    ),
+  ) );
+
   $wp_customize->add_setting( 'esky_dribbble', array(
     'default' => '',
     'sanitize_callback' => 'esky_sanitize_dribbble',
@@ -102,6 +118,37 @@ function esky_customize_register($wp_customize) {
     ),
   ) );
 
+  $wp_customize->add_setting( 'esky_deviantart', array(
+    'default' => '',
+    'sanitize_callback' => 'esky_sanitize_deviantart',
+  ) );
+
+  $wp_customize->add_control(
+    'esky_deviantart', array(
+      'type' => 'text',
+      'priority' => 10,
+      'section' => 'esky_social',
+      'label' => __( 'DeviantArt username' ),
+      'description' => __( 'DeviantArt username, without \'@\'' ),
+      'input_attrs' => array(
+    ),
+  ) );
+
+  $wp_customize->add_setting( 'esky_behance', array(
+    'default' => '',
+    'sanitize_callback' => 'esky_sanitize_behance',
+  ) );
+
+  $wp_customize->add_control(
+    'esky_behance', array(
+      'type' => 'text',
+      'priority' => 10,
+      'section' => 'esky_social',
+      'label' => __( 'Behance username' ),
+      'description' => __( 'Behance username, without \'@\'' ),
+      'input_attrs' => array(
+    ),
+  ) );
 }
 add_action( 'customize_register', 'esky_customize_register' );
 ?>

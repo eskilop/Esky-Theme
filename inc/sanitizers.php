@@ -20,8 +20,20 @@ function esky_sanitize_github( $username ) {
     $to_remove = ["https://github.com/", "github.com/"];
     return str_replace($to_remove, "", $username);
 }
+function esky_sanitize_bitbucket( $username ) {
+    $to_remove = ["https://bitbucket.org/", "bitbucket.org/"];
+    return str_replace($to_remove, "", $username);
+}
 function esky_sanitize_dribbble( $username ) {
     $to_remove = ["https://dribbble.com/", "dribbble.com/"];
+    return str_replace($to_remove, "", $username);
+}
+function esky_sanitize_deviantart( $username ) {
+    $to_remove = ["https://deviantart.com/", "deviantart.com/"];
+    return str_replace($to_remove, "", $username);
+}
+function esky_sanitize_behance( $username ) {
+    $to_remove = ["https://behance.net/", "behance.net/"];
     return str_replace($to_remove, "", $username);
 }
 ?>

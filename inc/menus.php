@@ -6,7 +6,10 @@ function esky_display_social_menu() {
   $instagram = get_theme_mod( "esky_instagram", null );
   $gitlab = get_theme_mod( "esky_gitlab", null );
   $github = get_theme_mod( "esky_github", null );
+  $bitbucket = get_theme_mod( "esky_bitbucket", null);
   $dribbble = get_theme_mod( "esky_dribbble", null);
+  $deviantart = get_theme_mod( "esky_deviantart", null);
+  $behance = get_theme_mod( "esky_behance", null);
 
   if (isset($telegram) && $telegram !=="") {
     echo "<a class=\"button esky-social-item is-blue is-rounded\" href=\"https://t.me/".$telegram."\">
@@ -48,10 +51,34 @@ function esky_display_social_menu() {
           </a>";
   }
 
+  if (isset($bitbucket) && $bitbucket !=="") {
+    echo "<a class=\"button esky-social-item is-lightblue is-rounded\" href=\"https://bitbucket.org/".$bitbucket."\">
+            <span class=\"icon\">
+              <i class=\"fab fa-bitbucket\"></i>
+            </span>
+          </a>";
+  }
+
   if (isset($dribbble) && $dribbble !=="") {
     echo "<a class=\"button esky-social-item is-pink is-rounded\" href=\"https://dribbble.com/".$dribbble."\">
             <span class=\"icon\">
               <i class=\"fab fa-dribbble\"></i>
+            </span>
+          </a>";
+  }
+
+  if (isset($deviantart) && $deviantart !=="") {
+    echo "<a class=\"button esky-social-item is-green is-rounded\" href=\"https://deviantart.com/".$deviantart."\">
+            <span class=\"icon\">
+              <i class=\"fab fa-deviantart\"></i>
+            </span>
+          </a>";
+  }
+
+  if (isset($behance) && $behance !=="") {
+    echo "<a class=\"button esky-social-item is-blue is-rounded\" href=\"https://behance.net/".$behance."\">
+            <span class=\"icon\">
+              <i class=\"fab fa-behance\"></i>
             </span>
           </a>";
   }
