@@ -2,6 +2,7 @@
 function esky_customize_register($wp_customize) {
   esky_social_menu_settings($wp_customize);
   esky_cta_settings($wp_customize);
+  esky_analytics_settings($wp_customize);
 }
 
 function esky_social_menu_settings($wp_customize) {
@@ -192,6 +193,25 @@ function esky_cta_settings($wp_customize) {
       'section' => 'esky_cta',
       'label' => __( 'Pinterest' ),
       'description' => __( 'Display share with pinterest button' ),
+  ) );
+}
+
+function esky_analytics_settings($wp_customize) {
+  $wp_customize->add_section( 'esky_analytics' , array(
+    'title'      => __( 'Analytics', 'esky' ),
+    'priority'   => 200,
+  ) );
+
+  $wp_customize->add_setting( 'esky_google_analytics', array(
+    'default' => null,
+  ) );
+
+  $wp_customize->add_control(
+    'esky_google_analytics', array(
+      'type' => 'textarea',
+      'section' => 'esky_analytics',
+      'label' => __( 'Google Analytics' ),
+      'description' => __( 'Paste in your google analytics code' ),
   ) );
 }
 

@@ -12,5 +12,5 @@
     </div>
   </div>
 </footer>
-<?php @ require 'gtag.html' ?>
+<?php echo get_theme_mod( 'esky_google_analytics', '') ?>
 </body>
