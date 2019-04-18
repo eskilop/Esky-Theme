@@ -171,18 +171,6 @@ function esky_cta_settings($wp_customize) {
       'description' => __( 'Display share with facebook button' ),
   ) );
 
-  $wp_customize->add_setting( 'esky_linkedin_cta', array(
-    'default' => false,
-  ) );
-
-  $wp_customize->add_control(
-    'esky_linkedin_cta', array(
-      'type' => 'checkbox',
-      'section' => 'esky_cta',
-      'label' => __( 'Linkedin' ),
-      'description' => __( 'Display share with linkedin button' ),
-  ) );
-
   $wp_customize->add_setting( 'esky_pinterest_cta', array(
     'default' => false,
   ) );
@@ -193,6 +181,18 @@ function esky_cta_settings($wp_customize) {
       'section' => 'esky_cta',
       'label' => __( 'Pinterest' ),
       'description' => __( 'Display share with pinterest button' ),
+  ) );
+
+  $wp_customize->add_setting( 'esky_whatsapp_cta', array(
+    'default' => false,
+  ) );
+
+  $wp_customize->add_control(
+    'esky_whatsapp_cta', array(
+      'type' => 'checkbox',
+      'section' => 'esky_cta',
+      'label' => __( 'Whatsapp' ),
+      'description' => __( 'Display share with whatsapp button' ),
   ) );
 }
 
