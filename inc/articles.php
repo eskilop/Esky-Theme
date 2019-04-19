@@ -22,6 +22,7 @@ function esky_display_cta() {
 
     $url = "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 
+    echo "<div style=\"esky_ctabox\">";
     if (isset($telegram) && $telegram !== false) {
         echo "<a class=\"button esky-social-item is-lightblue\" href=\"https://telegram.me/share/url?url=".$url."\">";
         echo "Share on ";
@@ -56,5 +57,44 @@ function esky_display_cta() {
         echo "<span style=\"padding:1.2rem;\" class=\"icon\"><i class=\"fab fa-facebook\"></i></span>";
         echo "</a>";
     }
+    echo "</div>";
 }
+
+ function esky_show_gallery_image_urls( $content ) {
+
+ 	global $post;
+
+ 	// Only do this on singular items
+ 	if( ! is_singular() )
+ 	    return $content;
+
+ 	// Make sure the post has a gallery in it
+ 	if( ! has_shortcode( $post->post_content, 'gallery' ) )
+ 	    return $content;
+
+ 	// Retrieve all galleries of this post
+    $galleries = get_post_galleries_images( $post );
+
+    $glry = "<div class=\"gallery-container\">";
+    $glry .= "<div style=\"width: 50%;margin: 0.2 auto;\"><img src=\"https://www.bmw.de/content/dam/bmw/common/all-models/4-series/coupe/2017/images-and-videos/images/BMW-4-series-coupe-images-and-videos-1920x1200-05.jpg.asset.1487327363288.jpg\" class=\"gallery-main\"/>";
+
+    // Loop through all galleries found
+	foreach( $galleries as $gallery ) {
+        $glry .="<div>";
+		foreach( $gallery as $image ) {
+            $glry .= "<img src=\"" . $image . "\" class=\"gallery-item\"/>";
+        }
+        $glry .= "</div>";
+	}
+    echo "</div></div>";
+    
+    $content = preg_replace('/\[gallery.*\]/', '', $content);
+
+	// Append our image list to the content of our post
+	$content .= $glry;
+
+ 	return $content;
+
+ }
+ add_filter( 'the_content', 'esky_show_gallery_image_urls' );
 ?>

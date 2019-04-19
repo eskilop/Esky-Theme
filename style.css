@@ -102,7 +102,24 @@ footer {
   margin-right: 0.5rem;
 }
 
- 
+.gallery-item {
+  margin: 0.2rem;
+  border-radius: 0.5rem;
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+.gallery-main {
+  margin: 0.5rem auto;
+  border-radius: 0.5rem;
+}
+
+.gallery-container {
+  margin: 3rem auto;
+  display: inline-table;
+  width: 100%;
+}
+
 .card {
   height: 100%;
   width: 100%;
