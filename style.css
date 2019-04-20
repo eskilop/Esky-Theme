@@ -268,6 +268,17 @@ div.nav-links {
     font-size: 1.5rem;
   }
 
+  .avatar-container {
+    text-align: center !important;
+  }
+
+  .avatar {
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    float: none !important;
+  }
+
   body, .content, .subtitle {
     font-size: 1rem;
   }
