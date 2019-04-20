@@ -109,15 +109,9 @@ footer {
 .gallery-item {
   margin: 0.2rem;
   border-radius: 0.5rem;
-  width: 6.5rem;
-  height: 6.5rem;
 }
 
 .gallery-item:hover {
-  margin: 0.2rem;
-  border-radius: 0.5rem;
-  width: 6.5rem;
-  height: 6.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -129,7 +123,7 @@ footer {
 .gallery-container {
   margin: 3rem auto;
   display: inline-table;
-  width: 100%;
+  text-align: center;
 }
 
 .card {
@@ -252,6 +246,15 @@ div.nav-links {
 {
   body {
     font-size: 1rem;
+  }
+
+  .gallery-container {
+      width: 100%;
+  }
+
+  .gallery-item {
+    width: 6.5rem;
+    height: 6.5rem;
   }
 }
 

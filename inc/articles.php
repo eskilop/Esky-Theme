@@ -76,12 +76,12 @@ function esky_gallery( $content ) {
    $galleries = get_post_galleries_images( $post );
 
    $glry = "<div class=\"gallery-container\">";
-   $glry .= "<div style=\"width: 50%;margin: 0.2 auto;\">";
+   $glry .= "<div style=\"display: inline-block\">";
    $glry .= "<img src=\"https://www.bmw.de/content/dam/bmw/common/all-models/4-series/coupe/2017/images-and-videos/images/BMW-4-series-coupe-images-and-videos-1920x1200-05.jpg.asset.1487327363288.jpg\" class=\"gallery-main\"/>";
 
    // Loop through all galleries found
 	foreach( $galleries as $gallery ) {
-       $glry .="<div>";
+       $glry .="<div style=\"\">";
 		foreach( $gallery as $image ) {
            $glry .= "<img src=\"" . $image . "\" class=\"gallery-item\"/>";
        }
