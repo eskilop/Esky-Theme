@@ -93,5 +93,5 @@ function esky_gallery( $content ) {
 
 	return $content;
 }
- add_filter( 'the_content', 'esky_gallery' );
+add_filter( 'the_content', 'esky_gallery' );
 ?>
