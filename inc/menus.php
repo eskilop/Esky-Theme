@@ -13,13 +13,13 @@ function esky_display_social_menu() {
   $behance = get_theme_mod( "esky_behance", null);
 
   if (isset($telegram) && $telegram !=="") {
-    echo "<a class=\"button esky-social-item is-blue is-rounded\" href=\"https://t.me/".$telegram."\">
+    echo "<a class=\"button esky-social-item is-lightblue is-rounded\" href=\"https://t.me/".$telegram."\">
             <span class=\"icon\">
               <i class=\"fab fa-telegram-plane\"></i>
             </span>
           </a>";
   }
-  
+
   if (isset($discord) && $discord !=="") {
     echo "<a class=\"button esky-social-item is-blue is-rounded\" href=\"https://discord.gg/".$discord."\">
             <span class=\"icon\">
@@ -37,7 +37,7 @@ function esky_display_social_menu() {
   }
 
   if (isset($twitter) && $twitter !=="") {
-    echo "<a class=\"button esky-social-item is-blue is-rounded\" href=\"https://twitter.com/".$twitter."\">
+    echo "<a class=\"button esky-social-item is-lightblue is-rounded\" href=\"https://twitter.com/".$twitter."\">
             <span class=\"icon\">
               <i class=\"fab fa-twitter\"></i>
             </span>
