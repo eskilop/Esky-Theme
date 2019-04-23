@@ -24,6 +24,19 @@ function esky_social_menu_settings($wp_customize) {
       'description' => __( 'Telegram username, without \'@\'' ),
   ) );
 
+  $wp_customize->add_setting( 'esky_discord', array(
+    'default' => null,
+    'sanitize_callback' => 'esky_sanitize_discord',
+  ) );
+
+  $wp_customize->add_control(
+    'esky_discord', array(
+      'type' => 'text',
+      'section' => 'esky_social',
+      'label' => __( 'Discord invite code' ),
+      'description' => __( 'Discord invite code , without \'https://discord.gg\'' ),
+  ) );
+
   $wp_customize->add_setting( 'esky_instagram', array(
     'default' => '',
     'sanitize_callback' => 'esky_sanitize_instagram',

@@ -2,6 +2,7 @@
 function esky_display_social_menu() {
 
   $twitter = get_theme_mod( "esky_twitter", null );
+  $discord = get_theme_mod( "esky_discord", null );
   $telegram = get_theme_mod( "esky_telegram", null );
   $instagram = get_theme_mod( "esky_instagram", null );
   $gitlab = get_theme_mod( "esky_gitlab", null );
@@ -15,6 +16,14 @@ function esky_display_social_menu() {
     echo "<a class=\"button esky-social-item is-blue is-rounded\" href=\"https://t.me/".$telegram."\">
             <span class=\"icon\">
               <i class=\"fab fa-telegram-plane\"></i>
+            </span>
+          </a>";
+  }
+  
+  if (isset($discord) && $discord !=="") {
+    echo "<a class=\"button esky-social-item is-blue is-rounded\" href=\"https://discord.gg/".$discord."\">
+            <span class=\"icon\">
+              <i class=\"fab fa-discord\"></i>
             </span>
           </a>";
   }
