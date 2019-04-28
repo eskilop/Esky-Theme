@@ -1,0 +1,146 @@
+/*
+ * This stylesheet contains the edits made to bulma, to make the main css for this theme
+ */
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Overpass:400,900&subset=latin-ext');
+
+// base colors
+$red: #D27A7A;
+$green: #62A862;
+
+$orange: #D29E7A;
+$blue: #58678D;
+
+$yellow: #D2C57A;
+$purple: #6A5A90;
+
+// derived
+$lightblue: #527187;
+$cyan: #497E7E;
+$pink: #94568A;
+
+$white: #FFFFFF;
+$edark: #18181F;
+
+$custom-colors: ("lightblue":$lightblue,"purple": $purple, "pink": $pink, "blue": $blue, "orange": $orange, "red": $red, "green": $green, "yellow": $yellow, "cyan": $cyan);
+
+$family-sans-serif: 'Overpass', sans-serif;
+$primary: $blue;
+$complementary: $orange;
+
+$link: $yellow;
+$link-hover: $white;
+
+$shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+// typography
+$text: darken($white, 7%);
+$text-light: darken($white, 15%);
+$text-strong: darken($white, 5%);
+$title-color: darken($white, 5%);
+$subtitle-color: $text;
+
+// navbar
+$navbar-background-color: lighten($edark, 2%);
+$navbar-item-hover-background-color: lighten($edark, 5%);
+$navbar-item-hover-color: $primary;
+$navbar-item-color: $text;
+
+$navbar-dropdown-background-color: lighten($edark, 2%);
+$navbar-dropdown-color: $text;
+$navbar-dropdown-border-top: 2px solid lighten($edark, 12%);
+
+$navbar-dropdown-item-hover-color: $primary;
+$navbar-dropdown-item-hover-background-color: lighten($edark, 2%);
+
+// button
+$button-color: $white;
+$button-background-color: lighten($edark, 10%);
+$button-border-color: lighten($edark, 10%);
+
+$button-hover-border-color: lighten($edark, 10%);
+$button-text-hover-background-color: lighten($edark, 10%);
+
+$button-active-border-color: lighten($edark, 10%);
+$button-active-background-color: lighten($edark, 10%);
+
+// cards
+$card-background-color: lighten($edark, 5%);
+$card-footer-border-top: 1px solid lighten($edark, 12%);
+
+$tag-background-color: lighten($edark, 5%);
+$tag-radius: 0.5rem;
+
+//footer
+$footer-background-color: lighten($edark, 2%);
+
+// general
+$body-background-color: $edark;
+$content-blockquote-border-left: 3px solid white;
+$content-bloackquote-background-color: $edark;
+
+// box
+$box-color: $white;
+$box-background-color: lighten($edark, 10%);
+$box-shadow: $shadow;
+
+// input
+$input-background-color: lighten($edark, 10%);
+$input-border-color: lighten($edark, 5%);
+$input-color: $text;
+$input-arrow: $text;
+$input-hover-border-color: lighten($edark, 5%);
+$input-hover-color: $text;
+$input-radius: 0.5rem;
+
+// files
+$file-border-color: $edark;
+$file-cta-color: $text;
+$file-cta-background-color: lighten($edark, 5%);
+$file-cta-hover-color: lighten($edark, 50%);
+
+// notification
+$notification-background-color: lighten($edark, 10%);
+$notification-radius: 0.5rem;
+
+// progress
+$progress-bar-background-color: lighten($edark, 10%);
+$progress-value-background-color: lighten($edark, 20%);
+
+// table
+$table-color: $text;
+$table-background-color: lighten($edark, 10%);
+$table-cell-heading-color: $text;
+$table-head-cell-color: $text;
+$table-head-background-color: lighten($edark, 5%);
+$table-row-active-background-color: lighten($edark, 20%);
+
+// tags
+$tag-background-color: lighten($edark, 5%);
+$tag-color: $text;
+$tag-radius: 0.5rem;
+
+// dropdown
+$dropdown-content-background-color: lighten($edark, 5%);
+$dropdown-content-arrow: $text;
+$dropdown-content-radius: 0.5rem;
+$dropdown-content-shadow: $shadow;
+$dropdown-item-color: darken($text, 10%);
+$dropdown-item-hover-color: darken($text, 10%);
+$dropdown-item-hover-background-color: lighten($edark, 10%);
+$dropdown-divider-background-color: lighten($edark, 15%);
+
+// menu
+$menu-item-radius: 0.5rem;
+$menu-item-hover-background-color: lighten($edark, 5%);
+$menu-item-active-background-color: $blue;
+
+// message
+$message-background-color: lighten($edark, 10%);
+$message-radius: 0.5rem;
+$message-header-background-color: lighten($edark, 5%);
+$message-header-color: $text;
+$message-header-radius: 0.5rem;
+
+@import "bulma-0.7.4/bulma.sass"
