@@ -137,6 +137,7 @@ function esky_format_submenu_title ($itemtitle) {
 }
 
 function the_menu($name) {
+  /*
   $menu = esky_get_menu_items($name);
 
   foreach(esky_menu_search_parents($menu) as $item) {
@@ -155,5 +156,15 @@ function the_menu($name) {
       echo '</div>';
     }
   }
+  */
+  $menu = wp_nav_menu( array(
+    "container" => 'div',
+    "echo" => false,
+    "walker" => new Esky_NavWalker()
+    ) );
+
+  $menu = str_replace("<div class=\"menu-long-menu-container\"><ul id=\"menu-long-menu\" class=\"menu\">", "", $menu);
+  $menu = str_replace("</ul></div>", "", $menu);
+  echo $menu;
 }
 ?>

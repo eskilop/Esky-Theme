@@ -58,6 +58,8 @@ function esky_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'esky_enqueue_scripts' );
 
+require get_template_directory() . '/classes/esky_navwalker.php';
+
 require get_template_directory() . '/inc/sanitizers.php';
 require get_template_directory() . '/inc/admin.php';
 require get_template_directory() . '/inc/menus.php';

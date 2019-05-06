@@ -168,12 +168,16 @@ ul {
   margin-left: 3rem;
 }
  
+div.navbar-item .menu-item {
+  list-style-type: none;
+}
+
 div.navbar-item a {
   color: #FFFFFF;
 }
  
 div.navbar-item a:hover {
-  color: #607C8A;
+  color: #7790C4;
 }
  
 div.esky-featured-image h1.title {
