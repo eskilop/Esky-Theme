@@ -160,6 +160,30 @@ function esky_cta_settings($wp_customize) {
       'description' => __( 'Display share with telegram button' ),
   ) );
 
+  $wp_customize->add_setting( 'esky_telegram_discussion_cta', array(
+    'default' => NULL,
+  ) );
+
+  $wp_customize->add_control(
+    'esky_telegram_discussion_cta', array(
+      'type' => 'text',
+      'section' => 'esky_cta',
+      'label' => __( 'Telegram Discussion message' ),
+      'description' => __( 'Message to append at the end of the article' ),
+  ) );
+
+  $wp_customize->add_setting( 'esky_telegram_discussion_url_cta', array(
+    'default' => NULL,
+  ) );
+
+  $wp_customize->add_control(
+    'esky_telegram_discussion_url_cta', array(
+      'type' => 'text',
+      'section' => 'esky_cta',
+      'label' => __( 'Telegram Discussion URL' ),
+      'description' => __( 'Telegram discussion group to redirect to' ),
+  ) );
+
   $wp_customize->add_setting( 'esky_twitter_cta', array(
     'default' => true,
   ) );

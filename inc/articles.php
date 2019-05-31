@@ -12,6 +12,26 @@ function esky_display_tags() {
     }
 }
 
+add_filter( "the_content", 'esky_display_telegram_discussion');
+function esky_display_telegram_discussion($content) {
+    $telegram_discussion_msg = get_theme_mod( "esky_telegram_discussion_cta", NULL);
+    $telegram_discussion_url = get_theme_mod( "esky_telegram_discussion_url_cta", NULL);
+    $compound_text = "";
+
+    if (isset($telegram_discussion_msg) && isset($telegram_discussion_msg)) {
+        $compound_text = " <a href='" . esc_url($telegram_discussion_url) . "'>" . $telegram_discussion_msg . "</a>";
+    }
+
+    $last = substr($content, -5);
+    $content = substr($content, 0, -5);
+    
+    if(is_single() && !is_home()) {
+        $content .= $compound_text;
+        $content .= $last;
+    }
+    return $content;
+}
+
 function esky_display_cta() {
     $telegram = get_theme_mod( 'esky_telegram_cta', true );
     $twitter = get_theme_mod( 'esky_twitter_cta', true );
@@ -22,7 +42,7 @@ function esky_display_cta() {
 
     $url = "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 
-    echo "<div style=\"esky_ctabox\">";
+    echo "<div class=\"esky_ctabox\">";
     if (isset($telegram) && $telegram !== false) {
         echo "<a class=\"button esky-social-item is-lightblue\" href=\"https://telegram.me/share/url?url=".$url."\">";
         echo "Share on ";
