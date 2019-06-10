@@ -17,14 +17,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 a.read-btn.button.card-footer-item.is-primary {
-  background-color: #23232d !important;
+  background-color: #22252e !important;
   border: none;
   outline: 0;
 }
 
 a.read-btn.button.card-footer-item.is-primary:active,
 a.read-btn.button.card-footer-item.is-primary:focus {
-  background-color: #18181f !important;
+  background-color: #1c1f27 !important;
   outline: 0;
   border: none;
   box-shadow:none;
