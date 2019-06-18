@@ -1,0 +1,14 @@
+{
+    "name": "eskilop/esky",
+    "type": "project",
+    "require": {
+        "talesoft/phim": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eskilop",
+            "email": "eskilop@eskilop.it"
+        }
+    ]
+}
