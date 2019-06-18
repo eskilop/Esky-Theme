@@ -16,8 +16,8 @@
       'pink' => get_theme_mod( "esky_color_pink", "#B7798F" ),
       'white' => get_theme_mod( "esky_foreground", "#CCD2E2" ),
       'edark' => get_theme_mod( "esky_background", "#16181E" ),
-      'primary' => get_theme_mod( "esky_color_primary", "#626D8D" ),
-      'complementary' => get_theme_mod( "esky_color_complementary", "#D1AB8A" ),
+      'primary' => get_theme_mod( "esky_primary", "#626D8D" ),
+      'complementary' => get_theme_mod( "esky_complementary", "#D1AB8A" ),
     );
 
     $base_css = '@charset "UTF-8";
@@ -367,7 +367,7 @@
       color: currentColor;
     }
     a:hover {
-      color: #DDDDDD;
+      color: '. $colors['primary'] .';
     }
     
     code {
@@ -12183,7 +12183,7 @@ function esky_colorscheme_preview() {
     color: currentColor;
   }
   a:hover {
-    color: #DDDDDD;
+    color: '. $colors['primary'] .';
   }
   
   code {
