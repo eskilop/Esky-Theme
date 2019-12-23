@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <?php if ( have_posts() ) : ?>
+        <div class="column is-one-quarter is-tablet"></div>
         <div class="columns is-multiline">
         <?php while ( have_posts() ) : the_post(); ?>
                 <?php get_template_part( '/template-parts/content/content'); ?>

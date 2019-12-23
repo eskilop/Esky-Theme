@@ -3,7 +3,7 @@
     <?php if (has_post_thumbnail()) : ?>
       <div class="card-image">
         <figure class="image">
-          <?php the_post_thumbnail('medium'); ?>
+          <?php the_post_thumbnail('full'); ?>
         </figure>
       </div>
     <?php endif; ?>
