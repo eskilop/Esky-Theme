@@ -80,6 +80,23 @@ function esky_display_cta() {
     echo "</div>";
 }
 
+// Display estimated reading time
+// raw_content is get_the_content()
+function esky_get_erd($raw_content) {
+  $content = apply_filters( 'the_content', $raw_content );
+  $stripped_tags =  wp_strip_all_tags(do_shortcode(html_entity_decode( $content )), true);
+
+  $minutes = (floor(str_word_count($stripped_tags)/225));
+  $message = "";
+
+  if ($minutes  > 1)
+    $message = " minutes read";
+  else
+    $message = " minute read";
+  
+  return $minutes . $message;
+}
+
 function esky_gallery( $content ) {
 
 	global $post;

@@ -194,7 +194,12 @@ div.navbar-item .menu-item {
 
 div.esky-featured-image h1.title {
   position: absolute;
-  bottom: 15;
+  bottom: 5%;
+}
+
+div.esky-featured-image p.subtitle {
+  position: absolute;
+  bottom: 3%;
 }
  
 nav, .navbar {
@@ -215,8 +220,8 @@ nav .pagination, .pagination {
   padding: 1rem;
 }
  
-.title {
-  padding: 1rem;
+.title, .subtitle {
+  padding-left: 1rem;
 }
  
 img.alignright {

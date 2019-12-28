@@ -12,6 +12,11 @@
         <?php the_title(); ?>
       </p>
       <?php
+                
+        echo '<p class="subtitle">' .
+              esky_get_erd(get_the_content()) .
+             '</p>';
+      
         if (!has_post_thumbnail())
         {
           echo '<p class="subtitle">' .
