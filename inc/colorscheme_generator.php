@@ -22,7 +22,7 @@
 
     // TODO: check if primary color is darker or lighter and edit theme text accordingly
 
-    $base_css = '@charset "UTF-8";
+    $base_css = '<style>@charset "UTF-8";
     @import url("https://fonts.googleapis.com/css?family=Overpass:400,900&subset=latin-ext");
     /*! bulma.io v0.8.0 | MIT License | github.com/jgthms/bulma */
     @keyframes spinAround {
@@ -9152,5 +9152,6 @@
       border-top: 1px solid ' .  Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.2)) . '  !important;
     }
     </style>';
+    echo $base_css;
   }
 ?>

@@ -1,8 +1,7 @@
 <?php
 function esky_customize_register($wp_customize) {
   esky_appereance_settings($wp_customize);
-  add_action( 'customize_save_after', 'esky_generate_colorscheme' );
-  add_action( 'wp_head', 'esky_colorscheme_preview');
+  add_action( 'wp_head', 'esky_generate_colorscheme' );
   esky_social_menu_settings($wp_customize);
   esky_cta_settings($wp_customize);
   esky_analytics_settings($wp_customize);
