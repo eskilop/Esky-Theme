@@ -1,0 +1,60 @@
+/*
+ * Esky_content.css
+ *
+ * This file contains all the styles which can be applied on
+ * various elements (mainly structurals)
+ */
+
+/* Modern content: Simple shadows */
+.boxshadow{
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.roundshadow {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.callout {
+  background-color: rgba(75,75,100,.35);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.content pre {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+}
+
+/* Neumorphism, neu shadows */
+.neushadow {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), -2px -2px 4px rgba(204, 210, 226, 0.3) !important;
+}
+
+.neushadow-inset {
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.7), inset -2px -2px 4px rgba(204, 210, 226, 0.3) !important;
+}
+
+.neucallout {
+  background-color: rgba(75,75,100,.35);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), -2px -2px 4px rgba(204, 210, 226, 0.3) !important;
+}
+
+.content pre.neupre {
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), -2px -2px 4px rgba(204, 210, 226, 0.3) !important;
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+}

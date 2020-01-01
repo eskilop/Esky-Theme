@@ -1,0 +1,219 @@
+/*
+ * Structure.css
+ *
+ * This file contains all the styles which are applied on
+ * various structural elements (mainly on articles)
+ */
+
+#avatar {
+  border-radius: 50%;
+}
+
+
+.post-tags {
+  margin: 1rem auto;
+}
+
+.esky-author {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.footer {
+  position: static !important;
+  padding: 5rem 2.5rem 5rem !important;
+}
+
+.esky-social-item {
+  margin: 2px;
+}
+
+.post-meta {
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.esky-author {
+  border-radius: 50% !important;
+  display: flex;
+  width: 6rem;
+  height: 6rem;
+}
+
+.meta-mixed {
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.meta-date, .meta-author{
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.5rem;
+}
+
+hr {
+  width: 15%;
+  margin: 1.5rem auto;
+}
+
+.content p {
+  word-wrap: break-word;
+}
+
+.content figure {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.content blockquote {
+  margin-left: 0.2rem;
+}
+
+footer {
+  width: 100%;
+}
+
+a img {
+  border-radius: 0.5rem;
+}
+
+.esky-featured-image {
+  height: 60%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0.5rem auto;
+}
+
+.gallery-item {
+  margin: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gallery-main {
+  display: block;
+  margin: 0.5rem auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-height: 35rem;
+  width: auto;
+}
+
+.gallery-container {
+  margin: 3rem auto;
+  display: inline-table;
+  text-align: center;
+}
+
+section {
+  padding: 2rem;
+}
+
+ul {
+  list-style: unset;
+  margin-left: 3rem;
+}
+
+div.navbar-item .menu-item {
+  list-style-type: none;
+}
+
+div.esky-featured-image h1.title {
+  position: absolute;
+  bottom: 5%;
+}
+
+div.esky-featured-image p.subtitle {
+  position: absolute;
+  bottom: 3%;
+}
+
+
+.title, .subtitle {
+  padding-left: 1rem;
+}
+
+img.alignright {
+  float:right;
+  margin:0 0 1em 1em;
+}
+
+img.alignleft {
+  float:left;
+  margin:0 1em 1em 0;
+}
+
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a img.alignright {
+  float:right; margin:0 0 1em 1em
+}
+
+a img.alignleft {
+  float:left;
+  margin:0 1em 1em 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2.screen-reader-text {
+  display: none;
+}
+
+@media only screen and (max-width : 2048px)
+{
+
+  .gallery-container {
+      width: 100%;
+  }
+
+  .gallery-item {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+
+@media only screen and (max-width : 1080px)
+{
+  .gallery-item {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width : 640px)
+{
+  .esky-featured-image {
+    height: 35%;
+  }
+
+  .gallery-item {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.esky-yt-sc {
+  margin: 1rem auto;
+}

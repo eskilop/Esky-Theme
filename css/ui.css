@@ -1,0 +1,81 @@
+/*
+ * Ui.css
+ *
+ * This file contains all the styles which are applied on
+ * various User Interface elements (buttons, certain images, cards, etc.)
+ */
+
+.button:not(.read-btn) {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+a.read-btn.button.card-footer-item.is-primary {
+  border: none;
+  outline: 0;
+}
+
+a.read-btn.button.card-footer-item.is-primary:active,
+a.read-btn.button.card-footer-item.is-primary:focus {
+  outline: 0;
+  border: none;
+  box-shadow:none;
+}
+
+/*div.content {
+  display: flex;
+}*/
+
+.card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+	border-radius: 0.5rem;
+}
+
+.card img{
+	max-width: 100%;
+	max-height: 100%;
+  margin: 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-footer {
+  margin-top: auto;
+}
+
+nav, .navbar {
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+}
+
+.columns, .column {
+  margin: 0.25rem auto !important;
+}
+
+nav .pagination, .pagination {
+  width: 100%;
+  display: contents;
+}
+
+.comments-area {
+  padding: 1rem;
+}
+
+div.nav-links {
+  margin: 1rem auto;
+}
+
+@media only screen and (max-width : 1080px)
+{
+  .avatar-container {
+    text-align: center !important;
+  }
+
+  .avatar {
+    display: inline-block !important;
+    width: 15rem !important;
+    height: 15rem !important;
+    float: none !important;
+  }
+}
