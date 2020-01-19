@@ -1,8 +1,10 @@
-<?php define('WP_USE_THEMES', false);
-require('../../../../wp-blog-header.php');
+<?php
+
+require('wp-blog-header.php');
+
 require get_template_directory() . '/vendor/autoload.php';
+
 use Phim\Color;
-header("Content-type: text/css");
 
 // defaults
 
@@ -21,7 +23,9 @@ $colors = array(
   'primary' => get_theme_mod( "esky_primary", "#626D8D" ),
   'complementary' => get_theme_mod( "esky_complementary", "#D1AB8A" ),
 );
+header("Content-type: text/html;");
 ?>
+<style>
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Overpass:400,900&subset=latin-ext");
 /*! bulma.io v0.8.0 | MIT License | github.com/jgthms/bulma */
@@ -327,14 +331,14 @@ a {
     color: <?php echo $colors["complementary"] ?>; }
 
 code {
-  background-color: whitesmoke;
+  background-color: <?php echo $colors["edark"] ?>;
   color: <?php echo $colors["red"] ?>;
   font-size: 0.875em;
   font-weight: normal;
   padding: 0.25em 0.5em 0.25em; }
 
 hr {
-  background-color: whitesmoke;
+  background-color: <?php echo $colors["white"] ?>;
   border: none;
   display: block;
   height: 2px;
@@ -364,7 +368,7 @@ fieldset {
 
 pre {
   -webkit-overflow-scrolling: touch;
-  background-color: whitesmoke;
+  background-color: <?php echo $colors["edark"] ?>;
   color: <?php echo $colors["white"] ?>;
   font-size: 0.875em;
   overflow-x: auto;
@@ -698,13 +702,13 @@ a.has-text-black:hover, a.has-text-black:focus {
   background-color: #0a0a0a !important; }
 
 .has-text-light {
-  color: whitesmoke !important; }
+  color: <?php echo $colors["edark"] ?> !important; }
 
 a.has-text-light:hover, a.has-text-light:focus {
   color: #dbdbdb !important; }
 
 .has-background-light {
-  background-color: whitesmoke !important; }
+  background-color: <?php echo $colors["edark"] ?> !important; }
 
 .has-text-dark {
   color: #363636 !important; }
@@ -893,10 +897,10 @@ a.has-text-cyan:hover, a.has-text-cyan:focus {
   background-color: #dbdbdb !important; }
 
 .has-text-white-ter {
-  color: whitesmoke !important; }
+  color: <?php echo $colors["edark"] ?> !important; }
 
 .has-background-white-ter {
-  background-color: whitesmoke !important; }
+  background-color: <?php echo $colors["edark"] ?> !important; }
 
 .has-text-white-bis {
   color: #fafafa !important; }
@@ -1364,7 +1368,7 @@ a.box:active {
         box-shadow: none;
         color: <?php echo $colors["white"] ?>; }
   .button.is-light {
-    background-color: whitesmoke;
+    background-color: <?php echo $colors["edark"] ?>;
     border-color: transparent;
     color: rgba(0, 0, 0, 0.7); }
     .button.is-light:hover, .button.is-light.is-hovered {
@@ -1381,47 +1385,47 @@ a.box:active {
       border-color: transparent;
       color: rgba(0, 0, 0, 0.7); }
     .button.is-light[disabled], fieldset[disabled] .button.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       border-color: transparent;
       box-shadow: none; }
     .button.is-light.is-inverted {
       background-color: rgba(0, 0, 0, 0.7);
-      color: whitesmoke; }
+      color: <?php echo $colors["edark"] ?>; }
       .button.is-light.is-inverted:hover, .button.is-light.is-inverted.is-hovered {
         background-color: rgba(0, 0, 0, 0.7); }
       .button.is-light.is-inverted[disabled], fieldset[disabled] .button.is-light.is-inverted {
         background-color: rgba(0, 0, 0, 0.7);
         border-color: transparent;
         box-shadow: none;
-        color: whitesmoke; }
+        color: <?php echo $colors["edark"] ?>; }
     .button.is-light.is-loading::after {
       border-color: transparent transparent rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.7) !important; }
     .button.is-light.is-outlined {
       background-color: transparent;
-      border-color: whitesmoke;
-      color: whitesmoke; }
+      border-color: <?php echo $colors["edark"] ?>;
+      color: <?php echo $colors["edark"] ?>; }
       .button.is-light.is-outlined:hover, .button.is-light.is-outlined.is-hovered, .button.is-light.is-outlined:focus, .button.is-light.is-outlined.is-focused {
-        background-color: whitesmoke;
-        border-color: whitesmoke;
+        background-color: <?php echo $colors["edark"] ?>;
+        border-color: <?php echo $colors["edark"] ?>;
         color: rgba(0, 0, 0, 0.7); }
       .button.is-light.is-outlined.is-loading::after {
-        border-color: transparent transparent whitesmoke whitesmoke !important; }
+        border-color: transparent transparent <?php echo $colors["edark"] ?> <?php echo $colors["edark"] ?> !important; }
       .button.is-light.is-outlined.is-loading:hover::after, .button.is-light.is-outlined.is-loading.is-hovered::after, .button.is-light.is-outlined.is-loading:focus::after, .button.is-light.is-outlined.is-loading.is-focused::after {
         border-color: transparent transparent rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.7) !important; }
       .button.is-light.is-outlined[disabled], fieldset[disabled] .button.is-light.is-outlined {
         background-color: transparent;
-        border-color: whitesmoke;
+        border-color: <?php echo $colors["edark"] ?>;
         box-shadow: none;
-        color: whitesmoke; }
+        color: <?php echo $colors["edark"] ?>; }
     .button.is-light.is-inverted.is-outlined {
       background-color: transparent;
       border-color: rgba(0, 0, 0, 0.7);
       color: rgba(0, 0, 0, 0.7); }
       .button.is-light.is-inverted.is-outlined:hover, .button.is-light.is-inverted.is-outlined.is-hovered, .button.is-light.is-inverted.is-outlined:focus, .button.is-light.is-inverted.is-outlined.is-focused {
         background-color: rgba(0, 0, 0, 0.7);
-        color: whitesmoke; }
+        color: <?php echo $colors["edark"] ?>; }
       .button.is-light.is-inverted.is-outlined.is-loading:hover::after, .button.is-light.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-light.is-inverted.is-outlined.is-loading:focus::after, .button.is-light.is-inverted.is-outlined.is-loading.is-focused::after {
-        border-color: transparent transparent whitesmoke whitesmoke !important; }
+        border-color: transparent transparent <?php echo $colors["edark"] ?> <?php echo $colors["edark"] ?> !important; }
       .button.is-light.is-inverted.is-outlined[disabled], fieldset[disabled] .button.is-light.is-inverted.is-outlined {
         background-color: transparent;
         border-color: rgba(0, 0, 0, 0.7);
@@ -1556,7 +1560,7 @@ a.box:active {
         box-shadow: none;
         color: #fff; }
     .button.is-primary.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #858585; }
       .button.is-primary.is-light:hover, .button.is-primary.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -1631,7 +1635,7 @@ a.box:active {
         box-shadow: none;
         color: #fff; }
     .button.is-link.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #8c8c8c; }
       .button.is-link.is-light:hover, .button.is-link.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -1706,7 +1710,7 @@ a.box:active {
         box-shadow: none;
         color: #fff; }
     .button.is-info.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: dimgray; }
       .button.is-info.is-light:hover, .button.is-info.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -1781,7 +1785,7 @@ a.box:active {
         box-shadow: none;
         color: rgba(0, 0, 0, 0.7); }
     .button.is-success.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #4a4a4a; }
       .button.is-success.is-light:hover, .button.is-success.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -1856,7 +1860,7 @@ a.box:active {
         box-shadow: none;
         color: rgba(0, 0, 0, 0.7); }
     .button.is-warning.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #4a4a4a; }
       .button.is-warning.is-light:hover, .button.is-warning.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -1931,7 +1935,7 @@ a.box:active {
         box-shadow: none;
         color: #fff; }
     .button.is-danger.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #525252; }
       .button.is-danger.is-light:hover, .button.is-danger.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -2006,7 +2010,7 @@ a.box:active {
         box-shadow: none;
         color: #fff; }
     .button.is-lightblue.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #5e5e5e; }
       .button.is-lightblue.is-light:hover, .button.is-lightblue.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -2156,7 +2160,7 @@ a.box:active {
         box-shadow: none;
         color: #fff; }
     .button.is-pink.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #707070; }
       .button.is-pink.is-light:hover, .button.is-pink.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -2231,7 +2235,7 @@ a.box:active {
         box-shadow: none;
         color: rgba(0, 0, 0, 0.7); }
     .button.is-blue.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #4a4a4a; }
       .button.is-blue.is-light:hover, .button.is-blue.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -2306,7 +2310,7 @@ a.box:active {
         box-shadow: none;
         color: rgba(0, 0, 0, 0.7); }
     .button.is-orange.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #4a4a4a; }
       .button.is-orange.is-light:hover, .button.is-orange.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -2381,7 +2385,7 @@ a.box:active {
         box-shadow: none;
         color: #fff; }
     .button.is-red.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #525252; }
       .button.is-red.is-light:hover, .button.is-red.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -2456,7 +2460,7 @@ a.box:active {
         box-shadow: none;
         color: rgba(0, 0, 0, 0.7); }
     .button.is-green.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #4a4a4a; }
       .button.is-green.is-light:hover, .button.is-green.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -2531,7 +2535,7 @@ a.box:active {
         box-shadow: none;
         color: rgba(0, 0, 0, 0.7); }
     .button.is-yellow.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #4a4a4a; }
       .button.is-yellow.is-light:hover, .button.is-yellow.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -2606,7 +2610,7 @@ a.box:active {
         box-shadow: none;
         color: #fff; }
     .button.is-cyan.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: dimgray; }
       .button.is-cyan.is-light:hover, .button.is-cyan.is-light.is-hovered {
         background-color: <?php echo $colors["yellow"] ?>;
@@ -2642,7 +2646,7 @@ a.box:active {
       top: calc(50% - (1em / 2));
       position: absolute !important; }
   .button.is-static {
-    background-color: whitesmoke;
+    background-color: <?php echo $colors["edark"] ?>;
     border-color: #dbdbdb;
     color: <?php echo $colors["white"] ?>;
     box-shadow: none;
@@ -2771,7 +2775,7 @@ a.box:active {
   font-size: 1em;
   margin-bottom: 1em; }
 .content blockquote {
-  background-color: whitesmoke;
+  background-color: <?php echo $colors["edark"] ?>;
   border-left: 3px solid white;
   padding: 1.25em 1.5em; }
 .content ol {
@@ -2980,7 +2984,7 @@ a.box:active {
     background-color: #0a0a0a;
     color: <?php echo $colors["white"] ?>; }
   .notification.is-light {
-    background-color: whitesmoke;
+    background-color: <?php echo $colors["edark"] ?>;
     color: rgba(0, 0, 0, 0.7); }
   .notification.is-dark {
     background-color: #363636;
@@ -3067,13 +3071,13 @@ a.box:active {
   .progress.is-black:indeterminate {
     background-image: linear-gradient(to right, #0a0a0a 30%, <?php echo Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.1)) ?> 30%); }
   .progress.is-light::-webkit-progress-value {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
   .progress.is-light::-moz-progress-bar {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
   .progress.is-light::-ms-fill {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
   .progress.is-light:indeterminate {
-    background-image: linear-gradient(to right, whitesmoke 30%, <?php echo Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.1)) ?> 30%); }
+    background-image: linear-gradient(to right, <?php echo $colors["edark"] ?> 30%, <?php echo Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.1)) ?> 30%); }
   .progress.is-dark::-webkit-progress-value {
     background-color: #363636; }
   .progress.is-dark::-moz-progress-bar {
@@ -3249,8 +3253,8 @@ a.box:active {
       color: <?php echo $colors["white"] ?>; }
     .table td.is-light,
     .table th.is-light {
-      background-color: whitesmoke;
-      border-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
+      border-color: <?php echo $colors["edark"] ?>;
       color: rgba(0, 0, 0, 0.7); }
     .table td.is-dark,
     .table th.is-dark {
@@ -3389,7 +3393,7 @@ a.box:active {
   .table.is-hoverable.is-striped tbody tr:not(.is-selected):hover {
     background-color: #fafafa; }
     .table.is-hoverable.is-striped tbody tr:not(.is-selected):hover:nth-child(even) {
-      background-color: whitesmoke; }
+      background-color: <?php echo $colors["edark"] ?>; }
   .table.is-narrow td,
   .table.is-narrow th {
     padding: 0.25em 0.5em; }
@@ -3463,7 +3467,7 @@ a.box:active {
     background-color: #0a0a0a;
     color: <?php echo $colors["white"] ?>; }
   .tag:not(body).is-light {
-    background-color: whitesmoke;
+    background-color: <?php echo $colors["edark"] ?>;
     color: rgba(0, 0, 0, 0.7); }
   .tag:not(body).is-dark {
     background-color: #363636;
@@ -3472,43 +3476,43 @@ a.box:active {
     background-color: <?php echo $colors["primary"] ?>;
     color: #fff; }
     .tag:not(body).is-primary.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #858585; }
   .tag:not(body).is-link {
     background-color: <?php echo $colors["white"] ?>;
     color: #fff; }
     .tag:not(body).is-link.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #8c8c8c; }
   .tag:not(body).is-info {
     background-color: <?php echo $colors["cyan"] ?>;
     color: #fff; }
     .tag:not(body).is-info.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: dimgray; }
   .tag:not(body).is-success {
     background-color: <?php echo $colors["green"] ?>;
     color: rgba(0, 0, 0, 0.7); }
     .tag:not(body).is-success.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #4a4a4a; }
   .tag:not(body).is-warning {
     background-color: <?php echo $colors["yellow"] ?>;
     color: rgba(0, 0, 0, 0.7); }
     .tag:not(body).is-warning.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #4a4a4a; }
   .tag:not(body).is-danger {
     background-color: <?php echo $colors["red"] ?>;
     color: #fff; }
     .tag:not(body).is-danger.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #525252; }
   .tag:not(body).is-lightblue {
     background-color: <?php echo $colors["lightblue"] ?>;
     color: #fff; }
     .tag:not(body).is-lightblue.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #5e5e5e; }
   .tag:not(body).is-purple {
     background-color: <?php echo $colors["purple"] ?>;
@@ -3520,43 +3524,43 @@ a.box:active {
     background-color: <?php echo $colors["pink"] ?>;
     color: #fff; }
     .tag:not(body).is-pink.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #707070; }
   .tag:not(body).is-blue {
     background-color: <?php echo $colors["blue"] ?>;
     color: rgba(0, 0, 0, 0.7); }
     .tag:not(body).is-blue.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #4a4a4a; }
   .tag:not(body).is-orange {
     background-color: <?php echo $colors["orange"] ?>;
     color: rgba(0, 0, 0, 0.7); }
     .tag:not(body).is-orange.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #4a4a4a; }
   .tag:not(body).is-red {
     background-color: <?php echo $colors["red"] ?>;
     color: #fff; }
     .tag:not(body).is-red.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #525252; }
   .tag:not(body).is-green {
     background-color: <?php echo $colors["green"] ?>;
     color: rgba(0, 0, 0, 0.7); }
     .tag:not(body).is-green.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #4a4a4a; }
   .tag:not(body).is-yellow {
     background-color: <?php echo $colors["yellow"] ?>;
     color: rgba(0, 0, 0, 0.7); }
     .tag:not(body).is-yellow.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: #4a4a4a; }
   .tag:not(body).is-cyan {
     background-color: <?php echo $colors["cyan"] ?>;
     color: #fff; }
     .tag:not(body).is-cyan.is-light {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: dimgray; }
   .tag:not(body).is-normal {
     font-size: 0.75rem; }
@@ -3691,7 +3695,7 @@ a.tag:hover {
 
 .number {
   align-items: center;
-  background-color: whitesmoke;
+  background-color: <?php echo $colors["edark"] ?>;
   border-radius: 290486px;
   display: inline-flex;
   font-size: 1.25rem;
@@ -3722,8 +3726,8 @@ a.tag:hover {
     border-color: <?php echo $colors["white"] ?>;
     box-shadow: 0 0 0 0.125em rgba(34, 34, 34, 0.25); }
   [disabled].input, [disabled].textarea, .select select[disabled], fieldset[disabled] .input, fieldset[disabled] .textarea, fieldset[disabled] .select select, .select fieldset[disabled] select {
-    background-color: whitesmoke;
-    border-color: whitesmoke;
+    background-color: <?php echo $colors["edark"] ?>;
+    border-color: <?php echo $colors["edark"] ?>;
     box-shadow: none;
     color: <?php echo $colors["white"] ?>; }
     [disabled].input::-moz-placeholder, [disabled].textarea::-moz-placeholder, .select select[disabled]::-moz-placeholder, fieldset[disabled] .input::-moz-placeholder, fieldset[disabled] .textarea::-moz-placeholder, fieldset[disabled] .select select::-moz-placeholder, .select fieldset[disabled] select::-moz-placeholder {
@@ -3750,7 +3754,7 @@ a.tag:hover {
     .is-black.input:focus, .is-black.textarea:focus, .is-black.is-focused.input, .is-black.is-focused.textarea, .is-black.input:active, .is-black.textarea:active, .is-black.is-active.input, .is-black.is-active.textarea {
       box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25); }
   .is-light.input, .is-light.textarea {
-    border-color: whitesmoke; }
+    border-color: <?php echo $colors["edark"] ?>; }
     .is-light.input:focus, .is-light.textarea:focus, .is-light.is-focused.input, .is-light.is-focused.textarea, .is-light.input:active, .is-light.textarea:active, .is-light.is-active.input, .is-light.is-active.textarea {
       box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25); }
   .is-dark.input, .is-dark.textarea {
@@ -3895,7 +3899,7 @@ a.tag:hover {
     .select select::-ms-expand {
       display: none; }
     .select select[disabled]:hover, fieldset[disabled] .select select:hover {
-      border-color: whitesmoke; }
+      border-color: <?php echo $colors["edark"] ?>; }
     .select select:not([multiple]) {
       padding-right: 2.5em; }
     .select select[multiple] {
@@ -3922,9 +3926,9 @@ a.tag:hover {
     .select.is-black select:focus, .select.is-black select.is-focused, .select.is-black select:active, .select.is-black select.is-active {
       box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25); }
   .select.is-light:not(:hover)::after {
-    border-color: whitesmoke; }
+    border-color: <?php echo $colors["edark"] ?>; }
   .select.is-light select {
-    border-color: whitesmoke; }
+    border-color: <?php echo $colors["edark"] ?>; }
     .select.is-light select:hover, .select.is-light select.is-hovered {
       border-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors["yellow"]), 0.05)) ?>; }
     .select.is-light select:focus, .select.is-light select.is-focused, .select.is-light select:active, .select.is-light select.is-active {
@@ -4121,7 +4125,7 @@ a.tag:hover {
     border-color: transparent;
     color: <?php echo $colors["white"] ?>; }
   .file.is-light .file-cta {
-    background-color: whitesmoke;
+    background-color: <?php echo $colors["edark"] ?>;
     border-color: transparent;
     color: rgba(0, 0, 0, 0.7); }
   .file.is-light:hover .file-cta, .file.is-light.is-hovered .file-cta {
@@ -4535,7 +4539,7 @@ a.tag:hover {
   .help.is-black {
     color: #0a0a0a; }
   .help.is-light {
-    color: whitesmoke; }
+    color: <?php echo $colors["edark"] ?>; }
   .help.is-dark {
     color: #363636; }
   .help.is-primary {
@@ -5012,7 +5016,7 @@ button.dropdown-item {
     color: #fff; }
 
 a.list-item {
-  background-color: whitesmoke;
+  background-color: <?php echo $colors["edark"] ?>;
   cursor: pointer; }
 
 .media {
@@ -5130,10 +5134,10 @@ a.list-item {
   .message.is-light {
     background-color: #fafafa; }
     .message.is-light .message-header {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: rgba(0, 0, 0, 0.7); }
     .message.is-light .message-body {
-      border-color: whitesmoke; }
+      border-color: <?php echo $colors["edark"] ?>; }
   .message.is-dark {
     background-color: #fafafa; }
     .message.is-dark .message-header {
@@ -5142,7 +5146,7 @@ a.list-item {
     .message.is-dark .message-body {
       border-color: #363636; }
   .message.is-primary {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-primary .message-header {
       background-color: <?php echo $colors["primary"] ?>;
       color: #fff; }
@@ -5150,7 +5154,7 @@ a.list-item {
       border-color: <?php echo $colors["primary"] ?>;
       color: #858585; }
   .message.is-link {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-link .message-header {
       background-color: <?php echo $colors["white"] ?>;
       color: #fff; }
@@ -5158,7 +5162,7 @@ a.list-item {
       border-color: <?php echo $colors["white"] ?>;
       color: #8c8c8c; }
   .message.is-info {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-info .message-header {
       background-color: <?php echo $colors["cyan"] ?>;
       color: #fff; }
@@ -5166,7 +5170,7 @@ a.list-item {
       border-color: <?php echo $colors["cyan"] ?>;
       color: dimgray; }
   .message.is-success {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-success .message-header {
       background-color: <?php echo $colors["green"] ?>;
       color: rgba(0, 0, 0, 0.7); }
@@ -5174,7 +5178,7 @@ a.list-item {
       border-color: <?php echo $colors["green"] ?>;
       color: #4a4a4a; }
   .message.is-warning {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-warning .message-header {
       background-color: <?php echo $colors["yellow"] ?>;
       color: rgba(0, 0, 0, 0.7); }
@@ -5182,7 +5186,7 @@ a.list-item {
       border-color: <?php echo $colors["yellow"] ?>;
       color: #4a4a4a; }
   .message.is-danger {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-danger .message-header {
       background-color: <?php echo $colors["red"] ?>;
       color: #fff; }
@@ -5190,7 +5194,7 @@ a.list-item {
       border-color: <?php echo $colors["red"] ?>;
       color: #525252; }
   .message.is-lightblue {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-lightblue .message-header {
       background-color: <?php echo $colors["lightblue"] ?>;
       color: #fff; }
@@ -5206,7 +5210,7 @@ a.list-item {
       border-color: <?php echo $colors["purple"] ?>;
       color: #4a4a4a; }
   .message.is-pink {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-pink .message-header {
       background-color: <?php echo $colors["pink"] ?>;
       color: #fff; }
@@ -5214,7 +5218,7 @@ a.list-item {
       border-color: <?php echo $colors["pink"] ?>;
       color: #707070; }
   .message.is-blue {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-blue .message-header {
       background-color: <?php echo $colors["blue"] ?>;
       color: rgba(0, 0, 0, 0.7); }
@@ -5222,7 +5226,7 @@ a.list-item {
       border-color: <?php echo $colors["blue"] ?>;
       color: #4a4a4a; }
   .message.is-orange {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-orange .message-header {
       background-color: <?php echo $colors["orange"] ?>;
       color: rgba(0, 0, 0, 0.7); }
@@ -5230,7 +5234,7 @@ a.list-item {
       border-color: <?php echo $colors["orange"] ?>;
       color: #4a4a4a; }
   .message.is-red {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-red .message-header {
       background-color: <?php echo $colors["red"] ?>;
       color: #fff; }
@@ -5238,7 +5242,7 @@ a.list-item {
       border-color: <?php echo $colors["red"] ?>;
       color: #525252; }
   .message.is-green {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-green .message-header {
       background-color: <?php echo $colors["green"] ?>;
       color: rgba(0, 0, 0, 0.7); }
@@ -5246,7 +5250,7 @@ a.list-item {
       border-color: <?php echo $colors["green"] ?>;
       color: #4a4a4a; }
   .message.is-yellow {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-yellow .message-header {
       background-color: <?php echo $colors["yellow"] ?>;
       color: rgba(0, 0, 0, 0.7); }
@@ -5254,7 +5258,7 @@ a.list-item {
       border-color: <?php echo $colors["yellow"] ?>;
       color: #4a4a4a; }
   .message.is-cyan {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
     .message.is-cyan .message-header {
       background-color: <?php echo $colors["cyan"] ?>;
       color: #fff; }
@@ -5341,7 +5345,7 @@ a.list-item {
 .modal-card-head,
 .modal-card-foot {
   align-items: center;
-  background-color: whitesmoke;
+  background-color: <?php echo $colors["edark"] ?>;
   display: flex;
   flex-shrink: 0;
   justify-content: flex-start;
@@ -5471,7 +5475,7 @@ a.list-item {
         background-color: #0a0a0a;
         color: <?php echo $colors["white"] ?>; } }
   .navbar.is-light {
-    background-color: whitesmoke;
+    background-color: <?php echo $colors["edark"] ?>;
     color: rgba(0, 0, 0, 0.7); }
     .navbar.is-light .navbar-brand > .navbar-item,
     .navbar.is-light .navbar-brand .navbar-link {
@@ -5513,7 +5517,7 @@ a.list-item {
         background-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors["yellow"]), 0.05)) ?>;
         color: rgba(0, 0, 0, 0.7); }
       .navbar.is-light .navbar-dropdown a.navbar-item.is-active {
-        background-color: whitesmoke;
+        background-color: <?php echo $colors["edark"] ?>;
         color: rgba(0, 0, 0, 0.7); } }
   .navbar.is-dark {
     background-color: #363636;
@@ -6241,7 +6245,7 @@ a.list-item {
     min-height: 3.25rem;
     width: 100%; }
   .navbar.has-shadow {
-    box-shadow: 0 2px 0 0 whitesmoke; }
+    box-shadow: 0 2px 0 0 <?php echo $colors["edark"] ?>; }
   .navbar.is-fixed-bottom, .navbar.is-fixed-top {
     left: 0;
     position: fixed;
@@ -6250,7 +6254,7 @@ a.list-item {
   .navbar.is-fixed-bottom {
     bottom: 0; }
     .navbar.is-fixed-bottom.has-shadow {
-      box-shadow: 0 -2px 0 0 whitesmoke; }
+      box-shadow: 0 -2px 0 0 <?php echo $colors["edark"] ?>; }
   .navbar.is-fixed-top {
     top: 0; }
 
@@ -6383,7 +6387,7 @@ a.navbar-item,
     padding-right: 1.5rem; }
 
 .navbar-divider {
-  background-color: whitesmoke;
+  background-color: <?php echo $colors["edark"] ?>;
   border: none;
   display: none;
   height: 2px;
@@ -6459,7 +6463,7 @@ a.navbar-item,
       background-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.02)) ?>;
       color: <?php echo $colors["primary"] ?>; }
     .navbar.is-transparent .navbar-dropdown a.navbar-item.is-active {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       color: <?php echo $colors["white"] ?>; }
 
   .navbar-burger {
@@ -6524,7 +6528,7 @@ a.navbar-item,
         background-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.02)) ?>;
         color: <?php echo $colors["primary"] ?>; }
       .navbar-dropdown a.navbar-item.is-active {
-        background-color: whitesmoke;
+        background-color: <?php echo $colors["edark"] ?>;
         color: <?php echo $colors["white"] ?>; }
     .navbar.is-spaced .navbar-dropdown, .navbar-dropdown.is-boxed {
       border-radius: 6px;
@@ -6731,12 +6735,12 @@ a.navbar-item,
   .panel.is-black .panel-block.is-active .panel-icon {
     color: #0a0a0a; }
   .panel.is-light .panel-heading {
-    background-color: whitesmoke;
+    background-color: <?php echo $colors["edark"] ?>;
     color: rgba(0, 0, 0, 0.7); }
   .panel.is-light .panel-tabs a.is-active {
-    border-bottom-color: whitesmoke; }
+    border-bottom-color: <?php echo $colors["edark"] ?>; }
   .panel.is-light .panel-block.is-active .panel-icon {
-    color: whitesmoke; }
+    color: <?php echo $colors["edark"] ?>; }
   .panel.is-dark .panel-heading {
     background-color: #363636;
     color: #fff; }
@@ -6909,7 +6913,7 @@ label.panel-block {
   cursor: pointer; }
   a.panel-block:hover,
   label.panel-block:hover {
-    background-color: whitesmoke; }
+    background-color: <?php echo $colors["edark"] ?>; }
 
 .panel-icon {
   display: inline-block;
@@ -6984,7 +6988,7 @@ label.panel-block {
     border: 1px solid transparent;
     border-radius: 4px 4px 0 0; }
     .tabs.is-boxed a:hover {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       border-bottom-color: #dbdbdb; }
   .tabs.is-boxed li.is-active a {
     background-color: <?php echo $colors["white"] ?>;
@@ -7000,7 +7004,7 @@ label.panel-block {
     margin-bottom: 0;
     position: relative; }
     .tabs.is-toggle a:hover {
-      background-color: whitesmoke;
+      background-color: <?php echo $colors["edark"] ?>;
       border-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors["green"]), 0.05)) ?>;
       z-index: 2; }
   .tabs.is-toggle li + li {
@@ -8313,7 +8317,7 @@ label.panel-block {
         .hero.is-black.is-bold .navbar-menu {
           background-image: linear-gradient(141deg, black 0%, #0a0a0a 71%, #181616 100%); } }
   .hero.is-light {
-    background-color: whitesmoke;
+    background-color: <?php echo $colors["edark"] ?>;
     color: rgba(0, 0, 0, 0.7); }
     .hero.is-light a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
     .hero.is-light strong {
@@ -8327,7 +8331,7 @@ label.panel-block {
         color: rgba(0, 0, 0, 0.7); }
     @media screen and (max-width: 1023px) {
       .hero.is-light .navbar-menu {
-        background-color: whitesmoke; } }
+        background-color: <?php echo $colors["edark"] ?>; } }
     .hero.is-light .navbar-item,
     .hero.is-light .navbar-link {
       color: rgba(0, 0, 0, 0.7); }
@@ -8350,12 +8354,12 @@ label.panel-block {
     .hero.is-light .tabs.is-boxed li.is-active a, .hero.is-light .tabs.is-boxed li.is-active a:hover, .hero.is-light .tabs.is-toggle li.is-active a, .hero.is-light .tabs.is-toggle li.is-active a:hover {
       background-color: rgba(0, 0, 0, 0.7);
       border-color: rgba(0, 0, 0, 0.7);
-      color: whitesmoke; }
+      color: <?php echo $colors["edark"] ?>; }
     .hero.is-light.is-bold {
-      background-image: linear-gradient(141deg, #dfd8d9 0%, whitesmoke 71%, white 100%); }
+      background-image: linear-gradient(141deg, #dfd8d9 0%, <?php echo $colors["edark"] ?> 71%, white 100%); }
       @media screen and (max-width: 768px) {
         .hero.is-light.is-bold .navbar-menu {
-          background-image: linear-gradient(141deg, #dfd8d9 0%, whitesmoke 71%, white 100%); } }
+          background-image: linear-gradient(141deg, #dfd8d9 0%, <?php echo $colors["edark"] ?> 71%, white 100%); } }
   .hero.is-dark {
     background-color: #363636;
     color: #fff; }
@@ -9143,11 +9147,36 @@ a:hover {
 	text-decoration: none !important;
 }
 a.read-btn {
-  background-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.05)) ?> !important;
+	background-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.10)) ?> !important;
+}
+a.read-btn:hover, a.read-btn:active, a.read-btn:focus {
+	background-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.25)) ?> !important;
+}
+.card-footer {
+	border-top: 1px solid <?php echo Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.3)) ?> !important;
+}
+ a {
+	text-decoration: underline !important;
+}
+a:hover {
+	text-decoration: none !important;
+}
+.navbar-item, div.navbar-item a, a.button {
+	text-decoration: none !important;
+}
+a.read-btn {
+	background-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.05)) ?> !important;
 }
 a.read-btn:hover, a.read-btn:active, a.read-btn:focus {
 	background-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.15)) ?> !important;
 }
+.content blockquote{
+	background-color: <?php echo $colors['edark'] ?>;
+}
 .card-footer {
 	border-top: 1px solid <?php echo Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.2)) ?> !important;
 }
+.content pre {
+  background-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors["edark"]), 0.5)) ?>;
+}
+</style>

@@ -2,7 +2,7 @@
 
 import sass
 
-cssfile = open('placeholder.css')
+cssfile = open('css/placeholder.css')
 base_css = cssfile.read()
 cssfile.close()
 
@@ -44,6 +44,7 @@ base_css = subst(cyan,  "<?php echo $colors[\"cyan\"] ?>")
 base_css = subst(pink,  "<?php echo $colors[\"pink\"] ?>")
 base_css = subst(white,  "<?php echo $colors[\"white\"] ?>")
 base_css = subst(edark,  "<?php echo $colors[\"edark\"] ?>")
+base_css = subst('whitesmoke',  "<?php echo $colors[\"edark\"] ?>")
 base_css = subst(primary,  "<?php echo $colors[\"primary\"] ?>")
 base_css = subst(complementary,  "<?php echo $colors[\"complementary\"] ?>")
 base_css = subst(link,  "<?php echo $colors[\"white\"] ?>")
@@ -82,6 +83,15 @@ base_css = base_css + "\n.navbar-item, div.navbar-item a, a.button {\n\ttext-dec
 # read btn as card
 base_css = base_css + "\na.read-btn {\n\tbackground-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors[\"edark\"]), 0.05)) ?> !important;\n}"
 base_css = base_css + "\na.read-btn:hover, a.read-btn:active, a.read-btn:focus {\n\tbackground-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors[\"edark\"]), 0.15)) ?> !important;\n}"
+
+#hr
+base_css = base_css + "\nhr{\n\tbackground-color: <?php echo $colors[\"white\"] ?> !important;\n}"
+
+# blockquote
+base_css = base_css + "\n.content blockquote{\n\tbackground-color: <?php echo $colors['edark'] ?>;\n}\n"
+
+# pre
+base_css = base_css + "\n.content pre{\n\tbackground-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors[\"edark\"]), 0.05)) ?>;\n}\n"
 
 # card-footer
 base_css = base_css + "\n.card-footer {\n\tborder-top: 1px solid <?php echo Color::toHexString(Color::lighten(Color::get($colors[\"edark\"]), 0.2)) ?> !important;\n}"
