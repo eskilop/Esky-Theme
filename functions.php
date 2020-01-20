@@ -46,8 +46,8 @@ endif;
 add_action( 'after_setup_theme', 'esky_setup');
 
 function esky_enqueue_scripts() {
-  wp_enqueue_style( 'material-icons', get_template_directory_uri() . '/css/material-icons/material-icons.css', $media="all");
-  wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/fontawesome/all.css', $media="all");
+  wp_enqueue_style( 'material-icons', get_template_directory_uri() . '/css/material-icons.css', $media="all");
+  wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/fontawesome/all.min.css', $media="all");
   wp_enqueue_style( 'style', get_stylesheet_uri(), $media="all" );
   wp_enqueue_style( 'structure', get_template_directory_uri() . '/css/structure.css');
   wp_enqueue_style( 'ui', get_template_directory_uri() . '/css/ui.css');
