@@ -1,43 +1,41 @@
 <?php
-function esky_sanitize_telegram( $username ) {
-    $to_remove = ["https://t.me/", "https://telegram.org/", "https://telegram.me/", "https://telegram.com/", "https://telegram.dog/",
-                  "t.me/", "telegram.org/", "telegram.me/", "telegram.com/", "telegram.dog/"];
-    return str_replace($to_remove, "", $username);
+function esky_sanitize_list($url) {
+    return str_replace(" ", "", $url);
 }
-function esky_sanitize_discord( $invite ) {
-    $to_remove = ["https://discordapp.com/", "https://discord.gg/", "discordapp.com/", "discord.gg/"];
-    return str_replace($to_remove, "", $invite);
+function esky_sanitize_color($color) {
+    if (@preg_match('/(foreground|background|primary|complementary|red|green|orange|blue|yellow|purple|lightblue|cyan|pink)/', $color))
+        return $color;
 }
-function esky_sanitize_instagram( $username ) {
-    $to_remove = ["https://instagram.com/", "instagram.com/"];
-    return str_replace($to_remove, "", $username);
+function esky_sanitize_icon($image) {
+    if (substr( $image, 0, 4 ) === "http") {
+        return esky_sanitize_url($image);
+    }
+    else {
+        $icon_only = '(fa)(-(.*))*';
+        $prefixes = '(fas|far|fal|fad|fab)';
+        $font_awesome = '/(' . $prefixes . '\ ' . $icon_only . '|'. $icon_only .')/';
+        if (@preg_match($font_awesome, $image))
+            return $image;
+    }
 }
-function esky_sanitize_twitter( $username ) {
-    $to_remove = ["https://twitter.com/", "twitter.com/"];
-    return str_replace($to_remove, "", $username);
-}
-function esky_sanitize_gitlab( $username ) {
-    $to_remove = ["https://gitlab.com/", "gitlab.com/"];
-    return str_replace($to_remove, "", $username);
-}
-function esky_sanitize_github( $username ) {
-    $to_remove = ["https://github.com/", "github.com/"];
-    return str_replace($to_remove, "", $username);
-}
-function esky_sanitize_bitbucket( $username ) {
-    $to_remove = ["https://bitbucket.org/", "bitbucket.org/"];
-    return str_replace($to_remove, "", $username);
-}
-function esky_sanitize_dribbble( $username ) {
-    $to_remove = ["https://dribbble.com/", "dribbble.com/"];
-    return str_replace($to_remove, "", $username);
-}
-function esky_sanitize_deviantart( $username ) {
-    $to_remove = ["https://deviantart.com/", "deviantart.com/"];
-    return str_replace($to_remove, "", $username);
-}
-function esky_sanitize_behance( $username ) {
-    $to_remove = ["https://behance.net/", "behance.net/"];
-    return str_replace($to_remove, "", $username);
+function esky_sanitize_url($url) {
+    $scheme = "[a-z][a-z0-9+.-]*";
+    $username = "([^:@/](:[^:@/])?@)?";
+    $segment = "([a-z][a-z0-9-]*?[a-z0-9])";
+    $domain = "({$segment}\.)*{$segment}";
+    $segment = "([0|1][0-9]{2}|2([0-4][0-9]|5[0-5]))";
+    $ipv4 = "({$segment}\.{$segment}\.{$segment}\.{$segment})";
+    $block = "([a-f0-9]{0,4})";
+    $rawIpv6 = "({$block}:){2,8}";
+    $ipv4sub = "(::ffff:{$ipv4})";
+    $ipv6 = "({$rawIpv6}|{$ipv4sub})";
+    $host = "($domain|$ipv4|$ipv6)";
+    $port = "(:[\d]{1,5})?";
+    $path = "([^?;\#]*)?";
+    $query = "(\?[^\#;]*)?";
+    $anchor = "(\#.*)?";
+    $regex = "#^{$scheme}://{$username}{$host}{$port}(/{$path}{$query}{$anchor}|)$#i";
+    if (isset($url) && @preg_match($regex, $url))
+        return $url;
 }
 ?>
