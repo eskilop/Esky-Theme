@@ -207,6 +207,44 @@ function esky_appereance_settings($wp_customize) {
 				'section' => 'esky_appereance',
 			)
     ) );
+
+    /*
+
+    This was predisposed to implement dynamic color adding
+    Although, currently I can't generate all the variations of the elements
+    for each different user color, and it's not in the script, so atm it's pretty useless
+
+    $wp_customize->add_setting( 'esky_color_add', array(
+      'default' => '',
+      'sanitize_callback' => 'esky_sanitize_list'
+    ) );
+  
+    $wp_customize->add_control(
+      'esky_color_add', array(
+        'type' => 'text',
+        'section' => 'esky_appereance',
+        'label' => __( 'Colors to add' ),
+        'description' => __( 'comma-separated list of color names' ),
+    ) );
+
+    foreach(explode(',', get_theme_mod('esky_color_add', '')) as $v) {
+      $wp_customize->add_setting( 'esky_color_' . $v, array(
+        'default' => '#FFFFFF',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'transport' => 'refresh',
+      ) );
+      $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+          $wp_customize,
+          'esky_color_' . $v,
+          array(
+            'label'   => __( ucwords($v) . ' color', 'esky' ),
+            'section' => 'esky_appereance',
+          )
+        ) );
+    }
+    */
+
 }
 
 function esky_social_menu_settings($wp_customize) {

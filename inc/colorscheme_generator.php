@@ -4,6 +4,7 @@
   use Phim\Color;
 
   function esky_generate_colorscheme() {
+
     $colors = array(
       'red' => get_theme_mod( "esky_color_red", "#D18D8A" ),
       'green' => get_theme_mod( "esky_color_green", "#6BA272" ),
@@ -19,6 +20,11 @@
       'primary' => get_theme_mod( "esky_primary", "#626D8D" ),
       'complementary' => get_theme_mod( "esky_complementary", "#D1AB8A" ),
     );
+
+    foreach (explode(',', get_theme_mod('esky_color_add', '')) as $v) {
+      if ($v !== '') 
+        $colors[$v] = get_theme_mod( 'esky_color_'.$v, '#FFFFFF');
+    }
 
     // TODO: check if primary color is darker or lighter and edit theme text accordingly
 
