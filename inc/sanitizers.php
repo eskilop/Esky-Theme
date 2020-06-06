@@ -1,6 +1,10 @@
 <?php
-function esky_sanitize_list($url) {
-    return str_replace(" ", "", $url);
+function esky_sanitize_list($list) {
+    $nl = array();
+    foreach (explode(',', $list) as $v) {
+        $nl[] = trim($v);
+    }
+    return implode(',', $nl);
 }
 function esky_sanitize_color($color) {
     if (@preg_match('/(foreground|background|primary|complementary|red|green|orange|blue|yellow|purple|lightblue|cyan|pink)/', $color))

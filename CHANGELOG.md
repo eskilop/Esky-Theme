@@ -10,8 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Sticky post indicator
 - Proper password-protected posts
 
-## [2.0.1] -
-## Added
+## [2.0.1] - 2020-06-06# Added
 - Dynamic social buttons
 - Predispose dynamic color inclusion
 

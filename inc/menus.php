@@ -7,7 +7,7 @@ function esky_display_social_menu() {
     $value_icon = get_theme_mod("esky_" . $v . "_icon", null);
     $value_color = get_theme_mod("esky_" . $v . "_color", null);
     if (isset($value) && $value !=="") {
-      echo "<a class=\"button esky-social-item is-" . $value_color . " is-rounded\" href=\"".$value."\">
+      echo "<a class=\"button esky-social-item is-rounded\" style=\"background-color: " . $value_color . "; border-color: " . $value_color . "\" href=\"".$value."\">
               <span class=\"icon\">";
               if (substr( $value_icon, 0, 4 ) === "http")
                 echo "<img src=\"" . $value_icon . "\" style=\"width=1em\">";

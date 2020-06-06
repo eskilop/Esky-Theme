@@ -21,6 +21,8 @@
       'complementary' => get_theme_mod( "esky_complementary", "#D1AB8A" ),
     );
 
+    $colors["link"] = $colors["complementary"];
+
     foreach (explode(',', get_theme_mod('esky_color_add', '')) as $v) {
       if ($v !== '') 
         $colors[$v] = get_theme_mod( 'esky_color_'.$v, '#FFFFFF');

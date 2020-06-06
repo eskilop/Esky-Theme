@@ -12,10 +12,10 @@ function esky_display_tags() {
     }
 }
 
-add_filter( "the_content", 'esky_display_telegram_discussion');
-function esky_display_telegram_discussion($content) {
-    $telegram_discussion_msg = get_theme_mod( "esky_telegram_discussion_cta", NULL);
-    $telegram_discussion_url = get_theme_mod( "esky_telegram_discussion_url_cta", NULL);
+add_filter( "the_content", 'esky_display_discussion');
+function esky_display_discussion($content) {
+    $telegram_discussion_msg = get_theme_mod( "esky_discussion_cta", NULL);
+    $telegram_discussion_url = get_theme_mod( "esky_discussion_url_cta", NULL);
     $compound_text = "";
 
     if (isset($telegram_discussion_msg) && isset($telegram_discussion_msg)) {

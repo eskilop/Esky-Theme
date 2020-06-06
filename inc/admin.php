@@ -290,22 +290,26 @@ function esky_social_menu_settings($wp_customize) {
       'esky_' . $v . '_icon', array(
         'type' => 'text',
         'section' => 'esky_social',
-        'label' => __( 'Icon for ' .$v ),
+        'label' => __( ucwords($v) . " button's icon" ),
         'description' => __( $v . ' button\'s icon (url or font-awesome class)' ),
     ) );
 
     $wp_customize->add_setting( 'esky_' . $v . '_color', array(
-      'default' => 'primary',
-      'sanitize_callback' => 'esky_sanitize_color',
+      'default' => '#FFFFFF',
+      'sanitize_callback' => 'sanitize_hex_color',
+      'transport' => 'refresh',
     ) );
-  
+
     $wp_customize->add_control(
-      'esky_' . $v . '_color', array(
-        'type' => 'text',
-        'section' => 'esky_social',
-        'label' => __( ucwords($v) . ' button\'s color' ),
-        'description' => __( 'Color for the service\'s button' ),
-    ) );
+      new WP_Customize_Color_Control(
+        $wp_customize,
+        'esky_' . $v . '_color',
+        array(
+          'label'   => __( ucwords($v) . ' button\'s color', 'esky' ),
+          'section' => 'esky_social',
+          'settings' => 'esky_' . $v . '_color'
+        )
+      ) );
   }
 }
 
@@ -325,30 +329,6 @@ function esky_cta_settings($wp_customize) {
       'section' => 'esky_cta',
       'label' => __( 'Telegram' ),
       'description' => __( 'Display share with telegram button' ),
-  ) );
-
-  $wp_customize->add_setting( 'esky_telegram_discussion_cta', array(
-    'default' => NULL,
-  ) );
-
-  $wp_customize->add_control(
-    'esky_telegram_discussion_cta', array(
-      'type' => 'text',
-      'section' => 'esky_cta',
-      'label' => __( 'Telegram Discussion message' ),
-      'description' => __( 'Message to append at the end of the article' ),
-  ) );
-
-  $wp_customize->add_setting( 'esky_telegram_discussion_url_cta', array(
-    'default' => NULL,
-  ) );
-
-  $wp_customize->add_control(
-    'esky_telegram_discussion_url_cta', array(
-      'type' => 'text',
-      'section' => 'esky_cta',
-      'label' => __( 'Telegram Discussion URL' ),
-      'description' => __( 'Telegram discussion group to redirect to' ),
   ) );
 
   $wp_customize->add_setting( 'esky_twitter_cta', array(
@@ -398,6 +378,30 @@ function esky_cta_settings($wp_customize) {
       'label' => __( 'Whatsapp' ),
       'description' => __( 'Display share with whatsapp button' ),
   ) );
+
+  $wp_customize->add_setting( 'esky_discussion_cta', array(
+    'default' => NULL,
+  ) );
+
+  $wp_customize->add_control(
+    'esky_discussion_cta', array(
+      'type' => 'text',
+      'section' => 'esky_cta',
+      'label' => __( 'Discussion message' ),
+      'description' => __( 'Message to append at the end of the articles' ),
+  ) );
+
+  $wp_customize->add_setting( 'esky_discussion_url_cta', array(
+    'default' => NULL,
+  ) );
+
+  $wp_customize->add_control(
+    'esky_discussion_url_cta', array(
+      'type' => 'text',
+      'section' => 'esky_cta',
+      'label' => __( 'Discussion URL' ),
+      'description' => __( 'If you have a place you want to invite your readers to discuss' ),
+  ) );
 }
 
 function esky_analytics_settings($wp_customize) {
@@ -406,16 +410,16 @@ function esky_analytics_settings($wp_customize) {
     'priority'   => 200,
   ) );
 
-  $wp_customize->add_setting( 'esky_google_analytics', array(
+  $wp_customize->add_setting( 'esky_analytics', array(
     'default' => null,
   ) );
 
   $wp_customize->add_control(
-    'esky_google_analytics', array(
+    'esky_analytics', array(
       'type' => 'textarea',
       'section' => 'esky_analytics',
-      'label' => __( 'Google Analytics' ),
-      'description' => __( 'Paste in your google analytics code' ),
+      'label' => __( 'Analytics Code' ),
+      'description' => __( 'Paste in your analytics code' ),
   ) );
 }
 
