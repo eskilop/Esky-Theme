@@ -1,3 +1,4 @@
+<img src="https://raw.githubusercontent.com/eskilop/project-addons/master/esky-theme/esky_theme_logo.png" width="64px"></img>
 # Esky Theme
 A modern, elegant, customizable, dynamic wordpress theme.
 
