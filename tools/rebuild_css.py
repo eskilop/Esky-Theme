@@ -117,6 +117,7 @@ base_css = subst("darken({}, 2.5%)".format(link_hover), "<?php echo Color::toHex
 base_css = base_css + "\n a {\n\ttext-decoration: underline !important;\n}"
 base_css = base_css + "\na:hover {\n\ttext-decoration: none !important;\n}"
 base_css = base_css + "\n.navbar-item, div.navbar-item a, a.button {\n\ttext-decoration: none !important;\n}"
+base_css = base_css + ".navbar-item, div.navbar-item a { color: <?php echo $colors[\"white\"] ?>; }"
 
 # read btn as card
 base_css = base_css + "\na.read-btn {\n\tbackground-color: <?php echo Color::toHexString(Color::lighten(Color::get($colors[\"edark\"]), 0.05)) ?> !important;\n}"

@@ -18,7 +18,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="javascript:history.back();">
-          <i class="material-icons">arrow_back</i>
+          <i class="fas fa-chevron-left"></i>
         </a>
         <a class="navbar-item" href="<?php bloginfo('url'); ?>">
           <?php

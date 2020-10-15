@@ -21,6 +21,10 @@ If you want to package your own version of the theme, do the following:
 # clone the repository
 git clone https://github.com/eskilop/Esky-Theme.git
 
+# Make sure you have composer installed (https://getcomposer.org)
+# then run:
+composer install
+
 # cd into the 'tools' directory
 cd Esky-Theme/tools
 
