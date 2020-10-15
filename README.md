@@ -13,6 +13,29 @@ Started as a side project to discover the many ways to extend wordpress, I conti
 * Mobile-first
 * Provides styling elements to use in your article (more in [the wiki](https://github.com/eskilop/Esky-Theme/wiki/Visual-Elements))
 
+## Packaging it yourself
+
+If you want to package your own version of the theme, do the following:
+
+```bash
+# clone the repository
+git clone https://github.com/eskilop/Esky-Theme.git
+
+# cd into the 'tools' directory
+cd Esky-Theme/tools
+
+# make the scripts executable
+chmod +x *.py
+
+# incorporate css and minify resources
+./rebuild_css.py production
+
+# package it
+./package.py
+```
+
+You should then be able to install the created file (`tools/esky.zip`) in wordpress, or extract it then transfer the `esky/` folder in your wordpress's `wp-content/themes/` directory.
+
 ## LICENSE
 ```
     Esky-Theme: A modern, elegant, customizable, dynamic wordpress theme.
