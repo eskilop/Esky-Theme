@@ -2,3 +2,11 @@
 /vendor/
 /css/bulma.css
 /css/bulma.css.map
+/css/dynamic_esky.php
+/css/*.min.css
+/js/*.min.js
+/tools/placeholder.min.css
+/tools/placeholder.css.map
+/tools/placeholder.css
+/tools/scss/bulma/
+/tools/scss/bulma-*.zip

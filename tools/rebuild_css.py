@@ -1,10 +1,48 @@
 #!/usr/bin/env python3
 
+import os
+import sys
 import sass
+import wget
+import zipfile
+import subprocess as sp
+from css_html_js_minify import process_single_css_file
 
-cssfile = open('css/placeholder.css')
+# bulma version to be downloaded and compiled
+BULMA_VERSION = '0.9.1'
+BULMA_URL = "https://github.com/jgthms/bulma/releases/download/{}/bulma-{}.zip".format(BULMA_VERSION, BULMA_VERSION)
+
+BULMA_DIR = "./scss/bulma/"
+
+if not os.path.exists(BULMA_DIR):
+  print("Bulma not found, downloading it...")
+  # download specified bulma version
+  wget.download(BULMA_URL, "./scss/bulma-{}.zip".format(BULMA_VERSION))
+
+  # unzip into sass-accessible directory
+  zip_ref = zipfile.ZipFile("./scss/bulma-{}.zip".format(BULMA_VERSION), 'r')
+  zip_ref.extractall("./scss/")
+  zip_ref.close()
+else:
+  print("Bulma found, skipping...")
+
+# check sass is in path
+if sp.call("which sass".split(' ')) != 0:
+  raise("sass executable not installed or not found in path")
+  exit()
+else:
+  print("sass installed and found in path, continuing...")
+
+sp.call("sass ./scss/eskydark.scss ./placeholder.css".split(' '))
+
+cssfile = open('./placeholder.css')
 base_css = cssfile.read()
 cssfile.close()
+
+OUT_FNAME = "placeholder.css"
+
+if sys.argv[1] == "production":
+  OUT_FNAME = "placeholder.min.css"
 
 # placeholder colors used for colorscheme generation
 red = "#AAAAAA"
@@ -96,6 +134,9 @@ base_css = base_css + "\n.content pre{\n\tbackground-color: <?php echo Color::to
 # card-footer
 base_css = base_css + "\n.card-footer {\n\tborder-top: 1px solid <?php echo Color::toHexString(Color::lighten(Color::get($colors[\"edark\"]), 0.2)) ?> !important;\n}"
 
-cssfile = open('placeholder.css', 'w')
+cssfile = open(OUT_FNAME, 'w')
 cssfile.write(base_css)
 cssfile.close()
+
+if sys.argv[1] == "production":
+  base_css = process_single_css_file(OUT_FNAME, overwrite=True)
