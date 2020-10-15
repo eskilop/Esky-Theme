@@ -24,6 +24,9 @@ git clone https://github.com/eskilop/Esky-Theme.git
 # cd into the 'tools' directory
 cd Esky-Theme/tools
 
+# install the modules required to run the scripts
+python3 -m pip install wget libsass css-html-js-minify
+
 # make the scripts executable
 chmod +x *.py
 
