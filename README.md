@@ -4,7 +4,7 @@ A modern, elegant, customizable, dynamic wordpress theme.
 
 Started as a side project to discover the many ways to extend wordpress, I continued incrementally adding features, until I felt it was good enough to be used, so I published it.
 
-[How does it look like?](https://www.eskilop.it) • [Documentation](https://github.com/eskilop/Esky-Theme/wiki)
+[How does it look like?](https://www.eskilop.it/blog/) • [Documentation](https://github.com/eskilop/Esky-Theme/wiki) • [Latest](https://www.github.com/releases/latest) • [More](https://www.eskilop.it/blog/esky-theme)
 
 ## Features
 
