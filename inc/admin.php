@@ -2,6 +2,7 @@
 function esky_customize_register($wp_customize) {
   esky_appereance_settings($wp_customize);
   add_action( 'wp_head', 'esky_generate_colorscheme' );
+  esky_privacy_settings($wp_customize);
   esky_social_menu_settings($wp_customize);
   esky_cta_settings($wp_customize);
   esky_analytics_settings($wp_customize);
@@ -245,6 +246,26 @@ function esky_appereance_settings($wp_customize) {
     }
     */
 
+}
+
+function esky_privacy_settings($wp_customize) {
+  $wp_customize->add_section( 'esky_privacy' , array(
+    'title'      => __( 'Privacy Settings', 'esky' ),
+    'priority'   => 95,
+  ) );
+
+  $wp_customize->add_setting( 'esky_password_posts', array(
+    'default'    => true,
+    'sanitize_callback' => 'sanitize_checkbox'
+  ) );
+
+  $wp_customize->add_control(
+    'esky_password_posts', array(
+      'type'      => 'checkbox',
+      'section'   => 'esky_privacy',
+      'label'       => __( 'Hide Password-Protected Posts' ),
+      'description' => esc_html__( 'Check if you don\'t want to show password-protected posts with the other articles' ),
+  ) );
 }
 
 function esky_social_menu_settings($wp_customize) {
