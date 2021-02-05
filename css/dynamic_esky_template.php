@@ -23,7 +23,7 @@ $colors = array(
   'primary' => get_theme_mod( "esky_primary", "#626D8D" ),
   'complementary' => get_theme_mod( "esky_complementary", "#D1AB8A" ),
 );
-header("Content-type: text/html;");
+@header("Content-type: text/html;");
 ?>
 <style>
 /*<minified-css-here>*/
