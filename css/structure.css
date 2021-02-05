@@ -155,7 +155,7 @@ a img {
 }
 
 .esky-featured-image {
-  height: 60%;
+  height: 99%;
   width: 99%;
   background-size: cover;
   background-position: center;
@@ -190,7 +190,6 @@ a img {
 }
 
 section {
-  padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
