@@ -7,7 +7,7 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="content">
+	<div id="esky-post" class="content">
     <?php
 
 		the_content(

@@ -5,8 +5,74 @@
  * various structural elements (mainly on articles)
  */
 
+@font-face {
+  font-family: 'OverpassRegular';
+  src: url(overpass/Overpass-Regular.ttf)
+}
+
+@font-face {
+  font-family: 'OverpassBlack';
+  src: url(overpass/Overpass-Black.ttf)
+}
+
+@font-face {
+  font-family: 'OverpassBold';
+  src: url(overpass/Overpass-Bold.ttf)
+}
+
+@font-face {
+  font-family: 'OverpassLightItalic';
+  src: url(overpass/Overpass-LightItalic.ttf)
+}
+
+@font-face {
+  font-family: 'OverpassBoldItalic';
+  src: url(overpass/Overpass-BoldItalic.ttf)
+}
+
 #avatar {
   border-radius: 50%;
+}
+
+#esky-featured-image-gradient {
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, center bottom, center center, from(#000000), to(#00000000));
+  border-radius: 0.5rem;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'OverpassRegular';
+}
+
+strong {
+  font-family: 'OverpassBold';
+}
+
+em {
+  font-family: 'OverpassLightItalic';
+}
+
+strong em {
+  font-family: 'OverpassBoldItalic';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'OverpassBlack';
+}
+
+#esky-post {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1.title, p.subtitle {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 pre {
@@ -38,7 +104,7 @@ pre {
 }
 
 .post-meta {
-  margin: 3rem auto;
+  margin: 3rem 1rem;
   display: flex;
   flex-direction: row;
 }
@@ -90,7 +156,7 @@ a img {
 
 .esky-featured-image {
   height: 60%;
-  width: 100%;
+  width: 99%;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -124,7 +190,8 @@ a img {
 }
 
 section {
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 ul {
@@ -137,18 +204,21 @@ div.navbar-item .menu-item {
 }
 
 div.esky-featured-image h1.title {
+  width: 100%;
   position: absolute;
   bottom: 5%;
+  text-align: center;
+}
+
+p.title {
+  text-align: center;
 }
 
 div.esky-featured-image p.subtitle {
+  width: 100%;
   position: absolute;
   bottom: 3%;
-}
-
-
-.title, .subtitle {
-  padding-left: 1rem;
+  text-align: center;
 }
 
 img.alignright {
@@ -186,9 +256,15 @@ h2.screen-reader-text {
   display: none;
 }
 
-@media only screen and (max-width : 2048px)
-{
+@media only screen and (max-width : 4096px) {
+  #esky-post {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
+@media only screen and (max-width : 2048px) {
   .gallery-container {
       width: 100%;
   }
@@ -199,8 +275,13 @@ h2.screen-reader-text {
   }
 }
 
-@media only screen and (max-width : 1080px)
-{
+@media only screen and (max-width : 1080px) {
+  #esky-post {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
   .gallery-item {
     width: 4rem;
     height: 4rem;
@@ -211,8 +292,7 @@ h2.screen-reader-text {
   }
 }
 
-@media only screen and (max-width : 640px)
-{
+@media only screen and (max-width : 640px) {
   .esky-featured-image {
     height: 35%;
   }
