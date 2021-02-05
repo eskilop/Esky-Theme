@@ -1,4 +1,4 @@
-<?php if (true && empty($post->post_password)) :?>
+<?php if (empty($post->post_password) || !get_theme_mod( 'esky_password_posts', true )) :?>
   <div class="column is-one-third">
     <div class="card is-flex">
       <?php if (has_post_thumbnail()) : ?>

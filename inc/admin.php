@@ -256,7 +256,6 @@ function esky_privacy_settings($wp_customize) {
 
   $wp_customize->add_setting( 'esky_password_posts', array(
     'default'    => true,
-    'sanitize_callback' => 'sanitize_checkbox'
   ) );
 
   $wp_customize->add_control(
