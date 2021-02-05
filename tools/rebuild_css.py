@@ -9,7 +9,7 @@ import subprocess as sp
 from css_html_js_minify import process_single_css_file
 
 # bulma version to be downloaded and compiled
-BULMA_VERSION = '0.9.1'
+BULMA_VERSION = '0.9.2'
 BULMA_URL = "https://github.com/jgthms/bulma/releases/download/{}/bulma-{}.zip".format(BULMA_VERSION, BULMA_VERSION)
 
 BULMA_DIR = "./scss/bulma/"
