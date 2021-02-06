@@ -2,12 +2,12 @@
 function esky_display_tags() {
     $tags = get_the_tags();
     if ($tags !== false) {
-        $html = '<h4>Tags:</h4><div class="post-tags">';
+        $html = '<div id="esky-post-tags-container"><h4>Tags:</h4><div class="post-tags">';
         foreach ( $tags as $tag ) {
             $tag_link = get_tag_link( $tag->term_id );
             $html .= "<span class=\"tag\" class='{$tag->slug}' style='margin: 0.2rem;'><a href='{" . esc_url( $tag_link) . "}'>$tag->name</a></span>";
         }
-        $html .= '</div>';
+        $html .= '</div></div>';
         echo $html;
     }
 }
@@ -33,6 +33,7 @@ function esky_display_discussion($content) {
 }
 
 function esky_display_cta() {
+    $copy = get_theme_mod( 'esky_copy_url_cta', true );
     $telegram = get_theme_mod( 'esky_telegram_cta', true );
     $twitter = get_theme_mod( 'esky_twitter_cta', true );
     $facebook = get_theme_mod( 'esky_facebook_cta', false );
@@ -43,6 +44,14 @@ function esky_display_cta() {
     $url = "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 
     echo "<div class=\"esky_ctabox\">";
+
+    if (isset($copy) && $copy !== false) {
+        echo "<a class=\"button esky-social-item is-lightblue\" href=\"javascript:var dummy = document.createElement('input'),text = window.location.href;document.body.appendChild(dummy);dummy.value = text;dummy.select();document.execCommand('copy');document.body.removeChild(dummy);\">";
+        echo "Copy Url ";
+        echo "<span style=\"padding:1.2rem;\" class=\"icon\"><i class=\"fas fa-copy\"></i></span>";
+        echo "</a>";
+    }
+
     if (isset($telegram) && $telegram !== false) {
         echo "<a class=\"button esky-social-item is-lightblue\" href=\"https://telegram.me/share/url?url=".$url."\">";
         echo "Share on ";

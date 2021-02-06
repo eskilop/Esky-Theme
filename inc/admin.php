@@ -339,6 +339,18 @@ function esky_cta_settings($wp_customize) {
     'priority'   => 110,
   ) );
 
+  $wp_customize->add_setting( 'esky_copy_url_cta', array(
+    'default' => true,
+  ) );
+
+  $wp_customize->add_control(
+    'esky_copy_url_cta', array(
+      'type' => 'checkbox',
+      'section' => 'esky_cta',
+      'label' => __( 'Url Copy' ),
+      'description' => __( 'Display a button to copy page URL' ),
+  ) );
+
   $wp_customize->add_setting( 'esky_telegram_cta', array(
     'default' => true,
   ) );

@@ -41,6 +41,10 @@
   border-radius: 0.5rem;
 }
 
+#esky-post-tags-container {
+  margin: 1.5rem;
+}
+
 body {
   font-size: 1rem;
   font-family: 'OverpassRegular';
@@ -103,8 +107,12 @@ pre {
   margin: 2px;
 }
 
+.esky_ctabox {
+  margin: 1rem 1.5rem;
+}
+
 .post-meta {
-  margin: 3rem 1rem;
+  margin: 3rem 1.5rem;
   display: flex;
   flex-direction: row;
 }
