@@ -267,7 +267,7 @@ function esky_privacy_settings($wp_customize) {
   ) );
 
   $wp_customize->add_setting( 'esky_ppp_initial_text', array(
-    'default'    => '',
+    'default'    => 'Enter Password to Unlock Post:',
   ) );
 
   $wp_customize->add_control(

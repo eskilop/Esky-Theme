@@ -148,7 +148,7 @@ function esky_password_form() {
     $loginurl = site_url() . '/wp-login.php?action=postpass';
     $label = 'pwbox-' . ( ! empty( $post->ID ) ? $post->ID : rand() );
 
-    $initial_text = get_theme_mod( 'esky_ppp_initial_text', '' );
+    $initial_text = get_theme_mod( 'esky_ppp_initial_text', 'Enter Password to Unlock Post:' );
  
     ob_start();
     ?>
