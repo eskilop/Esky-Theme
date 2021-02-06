@@ -45,21 +45,21 @@ if sys.argv[1] == "production":
   OUT_FNAME = "placeholder.min.css"
 
 # placeholder colors used for colorscheme generation
-red = "#AAAAAA"
-green = "#BBBBBB"
-orange = "#CCCCCC"
-blue = "#DDDDDD"
-yellow = "#EEEEEE"
-purple = "#FFFFFF"
-lightblue = "#999999"
-cyan = "#888888"
-pink = "#777777"
-white = "#AA0000"
-edark = "#555555"
-primary = "#444444"
-complementary = "#333333"
-link = "#222222"
-link_hover = "#111111"
+red = "#3A3A3A"
+green = "#6B6B6B"
+orange = "#919191"
+blue = "#737373"
+yellow = "#525252"
+purple = "#797979"
+lightblue = "#111111"
+cyan = "#550055"
+pink = "#003300"
+white = "#000044"
+edark = "#222222"
+primary = "#474747"
+complementary = "#330022"
+link = "#440099"
+link_hover = "#55a555"
 
 def from_scss(colorstr):
   replacement_b = "a {\n  color: "
@@ -81,6 +81,9 @@ base_css = subst(lightblue,  "<?php echo $colors[\"lightblue\"] ?>")
 base_css = subst(cyan,  "<?php echo $colors[\"cyan\"] ?>")
 base_css = subst(pink,  "<?php echo $colors[\"pink\"] ?>")
 base_css = subst(white,  "<?php echo $colors[\"white\"] ?>")
+base_css = subst("#000020",  "<?php echo $colors[\"white\"] ?>")
+base_css = subst("#00002b",  "<?php echo $colors[\"white\"] ?>")
+
 base_css = subst(edark,  "<?php echo $colors[\"edark\"] ?>")
 base_css = subst('whitesmoke',  "<?php echo $colors[\"edark\"] ?>")
 base_css = subst(primary,  "<?php echo $colors[\"primary\"] ?>")

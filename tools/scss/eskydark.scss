@@ -1,31 +1,31 @@
 @charset "utf-8";
 
 // base colors
-$red: #D18D8A;
-$green: #6BA272;
+$red: #3A3A3A;
+$green: #6B6B6B;
 
-$orange: #D1AB8A;
-$blue: #626D8D;
+$orange: #919191;
+$blue: #737373;
 
-$yellow: #D1CB8A;
-$purple: #75628E;
+$yellow: #525252;
+$purple: #797979;
 
 // derived
-$lightblue: #5C7387;
-$cyan: #557B7F;
-$pink: #B7798F;
+$lightblue: #111111;
+$cyan: #550055;
+$pink: #003300;
 
-$white: #FFFFFF;
-$edark: #16181E;
+$white: #000044;
+$edark: #222222;
 
 $custom-colors: ("lightblue":$lightblue,"purple": $purple, "pink": $pink, "blue": $blue, "orange": $orange, "red": $red, "green": $green, "yellow": $yellow, "cyan": $cyan);
 
 $family-sans-serif: 'Overpass', sans-serif;
-$primary: $blue;
-$complementary: $orange;
+$primary: #474747;
+$complementary: #330022;
 
-$link: $yellow;
-$link-hover: $white;
+$link: #440099;
+$link-hover: #55a555;
 
 $shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
