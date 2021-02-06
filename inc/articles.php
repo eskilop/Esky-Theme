@@ -140,4 +140,28 @@ function esky_gallery( $content ) {
 	return $content;
 }
 add_filter( 'the_content', 'esky_gallery' );
+
+add_filter( 'the_password_form', 'esky_password_form' );
+function esky_password_form() {
+    global $post;
+ 
+    $loginurl = site_url() . '/wp-login.php?action=postpass';
+    $label = 'pwbox-' . ( ! empty( $post->ID ) ? $post->ID : rand() );
+
+    $initial_text = get_theme_mod( 'esky_ppp_initial_text', '' );
+ 
+    ob_start();
+    ?>
+
+    <div class="container-custom">            
+        <form action="<?php echo esc_attr( $loginurl ) ?>" method="post" class="esky-password-form" role="search">
+            <label for="<?php echo esc_attr( $label ) ?>" class="esky-post-password-label"><?php esc_attr_e( $initial_text ) ?></label><br/><br/>
+            <input name="post_password" id="<?php echo esc_attr( $label ) ?>" class="input is-primary" type="password" placeholder="Enter your access code" />
+            <input type="submit" name="Submit" class="button is-primary esky-pass-submit" value="<?php esc_attr_e( "Access" ) ?>" />            
+        </form>
+    </div>
+ 
+    <?php
+    return ob_get_clean();
+}
 ?>

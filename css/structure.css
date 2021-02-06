@@ -103,6 +103,16 @@ pre {
   padding: 5rem 2.5rem 5rem !important;
 }
 
+.esky-password-form {
+  width: 50%;
+  margin: 1rem auto;
+}
+
+.esky-pass-submit {
+  width: 100%;
+  margin: 1rem auto;
+}
+
 .esky-social-item {
   margin: 2px;
 }
@@ -287,6 +297,10 @@ h2.screen-reader-text {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .esky-password-form {
+    width: 80%;
   }
   
   .gallery-item {

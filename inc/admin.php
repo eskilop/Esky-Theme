@@ -265,6 +265,18 @@ function esky_privacy_settings($wp_customize) {
       'label'       => __( 'Hide Password-Protected Posts' ),
       'description' => esc_html__( 'Check if you don\'t want to show password-protected posts with the other articles' ),
   ) );
+
+  $wp_customize->add_setting( 'esky_ppp_initial_text', array(
+    'default'    => '',
+  ) );
+
+  $wp_customize->add_control(
+    'esky_ppp_initial_text', array(
+      'type'      => 'text',
+      'section'   => 'esky_privacy',
+      'label'       => __( 'Message Before Password Protected Posts' ),
+      'description' => esc_html__( 'You can write a custom message to the users that get to your password-protected post' ),
+  ) );
 }
 
 function esky_social_menu_settings($wp_customize) {
