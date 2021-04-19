@@ -277,6 +277,18 @@ function esky_privacy_settings($wp_customize) {
       'label'       => __( 'Message Before Password Protected Posts' ),
       'description' => esc_html__( 'You can write a custom message to the users that get to your password-protected post' ),
   ) );
+
+  $wp_customize->add_setting( 'esky_disable_floc', array(
+    'default'    => true,
+  ) );
+
+  $wp_customize->add_control(
+    'esky_disable_floc', array(
+      'type'      => 'checkbox',
+      'section'   => 'esky_privacy',
+      'label'       => __( 'Disable FLoC' ),
+      'description' => esc_html__( 'Check if you intend to disable FLoC on this website' ),
+  ) );
 }
 
 function esky_social_menu_settings($wp_customize) {
@@ -468,4 +480,13 @@ function esky_analytics_settings($wp_customize) {
 }
 
 add_action( 'customize_register', 'esky_customize_register' );
+
+function disable_floc($headers) {
+    $headers['Permissions-Policy'] = 'interest-cohort=()';
+    return $headers;
+  }
+ 
+if (get_theme_mod('esky_disable_floc', true)) {
+    add_filter('wp_headers', 'disable_floc');
+}
 ?>

@@ -21,12 +21,15 @@ If you want to package your own version of the theme, do the following:
 # clone the repository
 git clone https://github.com/eskilop/Esky-Theme.git
 
+# Enter the theme directory
+cd Esky-Theme
+
 # Make sure you have composer installed (https://getcomposer.org)
 # then run:
-composer install
+composer install --no-dev -o --prefer-dist
 
 # cd into the 'tools' directory
-cd Esky-Theme/tools
+cd tools
 
 # install the modules required to run the scripts
 python3 -m pip install wget libsass css-html-js-minify
